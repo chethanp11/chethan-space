@@ -1,0 +1,35 @@
+{
+  "name": "chethan-space",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "dev:clean": "./scripts/start-app.sh",
+    "start:clean": "MODE=prod ./scripts/start-app.sh"
+  },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "next": "16.2.6",
+    "next-mdx-remote": "6.0.0",
+    "reading-time": "latest",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "rehype-pretty-code": "latest",
+    "remark-gfm": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "3.4.17",
+    "typescript": "latest"
+  }
+}

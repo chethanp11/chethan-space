@@ -1,0 +1,37 @@
+---
+title: Context Engineering for Enterprise AI Systems
+summary: Context engineering is the discipline of assembling the right business, data, policy, and workflow context at the right time.
+date: '2026-01-20'
+tags: [Context Engineering, Knowledge Systems, RAG]
+category: Context Engineering
+featured: true
+---
+
+Context is not a prompt trick. In enterprise systems, context is a governed supply chain.
+
+## What context includes
+
+- Business definitions
+- Metrics and semantic models
+- Source documents
+- Policy constraints
+- User role and permissions
+- Workflow state
+- Historical decisions
+
+## Design pattern
+
+Treat context as an explicit layer with quality checks, ownership, freshness metadata, and evaluation.
+
+```ts
+export type ContextPacket = {
+  sources: string[];
+  policyScope: string;
+  freshness: 'current' | 'stale' | 'unknown';
+  confidence: number;
+};
+```
+
+## Why it compounds
+
+Once context is modeled explicitly, multiple AI workflows can reuse it instead of rebuilding assumptions from scratch.

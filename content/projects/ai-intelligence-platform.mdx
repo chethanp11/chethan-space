@@ -1,0 +1,46 @@
+---
+title: AI Intelligence Platform
+summary: A modular reference platform for orchestrating enterprise AI workflows with context, governance, evaluation, and reusable capabilities.
+date: '2026-01-15'
+tags: [Enterprise AI, Orchestration, Governance, Context]
+category: AI Platforms
+status: Architecture Draft
+featured: true
+---
+
+## Problem statement
+
+Enterprise AI efforts often start as isolated experiments. They fail to compound because context, controls, evaluation, and workflow integration are treated as afterthoughts.
+
+## Why it matters
+
+The durable platform layer is not a single model. It is the operating system around models: context management, tool access, policy, observability, feedback, and reusable workflow capabilities.
+
+## Architecture overview
+
+```txt
+Sources → Context Layer → Orchestration Runtime → Governance Controls → Human Workflow
+```
+
+## Capabilities
+
+- Governed retrieval and context assembly
+- Agent workflow routing
+- Policy and approval gates
+- Evaluation and trace capture
+- Reusable capability registry
+
+<Callout title="Design principle">
+Architecture should make responsible execution the default path, not an exception path.
+</Callout>
+
+## Governance approach
+
+Every workflow should produce an execution trace: inputs, retrieved context, tool calls, decisions, approvals, and outputs.
+
+## Roadmap
+
+- Capability catalog
+- Evaluation harness
+- Admin control plane
+- LinkedIn-ready implementation memos
