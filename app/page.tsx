@@ -10,9 +10,7 @@ const focusAreas: Array<{ title: string; icon: IconName }> = [
   { title: 'Technology leadership and platform thinking', icon: 'briefcase' },
   { title: 'Enterprise AI and analytics modernization', icon: 'ai' },
   { title: 'Knowledge systems and workflow design', icon: 'systems' },
-  { title: 'Governance, trust, and responsible adoption', icon: 'governance' },
-  { title: 'Natural farming and grounded systems learning', icon: 'farm' },
-  { title: 'Technology education for young builders', icon: 'education' }
+  { title: 'Governance, trust, and responsible adoption', icon: 'governance' }
 ];
 
 const principles: Array<[string, string, IconName]> = [
@@ -30,25 +28,25 @@ export default function HomePage() {
     <>
       <section className="mx-auto grid max-w-content gap-12 px-5 py-20 sm:py-28 lg:grid-cols-[1fr_400px] lg:items-center">
         <div>
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-copper/25 bg-white/65 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-blue shadow-sm shadow-ink-900/5 dark:border-ink-800 dark:bg-ink-900/50 dark:text-brand-sand">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-copper/25 bg-white/65 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-blue shadow-sm shadow-ink-900/5">
             <Icon name="spark" className="h-4 w-4" />
             AI Leadership · Analytics · Governance · Systems
           </p>
-          <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.035em] text-brand-navy dark:text-white sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.035em] text-brand-navy sm:text-5xl lg:text-6xl">
             I help shape practical AI, analytics, and technology systems for serious enterprise work.
           </h1>
-          <p className="mt-7 max-w-2xl text-xl leading-9 text-ink-700 dark:text-ink-300">
+          <p className="mt-7 max-w-2xl text-xl leading-9 text-ink-700">
             My work sits at the intersection of AI leadership, analytics transformation, governance, workflow architecture, and enterprise execution. I use this space to share the systems I build, the lessons I learn, and the thinking behind my professional journey.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link className="inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/20 transition hover:-translate-y-0.5 hover:bg-brand-blue dark:bg-brand-sand dark:text-ink-950" href="/projects" target="_blank" rel="noopener noreferrer">Explore Work <Icon name="arrow" className="h-4 w-4" /></Link>
-            <Link className="rounded-full border border-brand-copper/50 bg-white/70 px-5 py-3 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:border-brand-copper dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href="/insights" target="_blank" rel="noopener noreferrer">Read Writing</Link>
-            <Link className="rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href="/journey" target="_blank" rel="noopener noreferrer">Professional Journey</Link>
-            <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href={siteConfig.links.linkedin} target="_blank" rel="noopener noreferrer"><Icon name="linkedin" className="h-4 w-4" /> LinkedIn</Link>
-            <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href={siteConfig.links.github} target="_blank" rel="noopener noreferrer"><Icon name="github" className="h-4 w-4" /> GitHub</Link>
+            <Link className="inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/20 transition hover:-translate-y-0.5 hover:bg-brand-blue" href="/projects" target="_blank" rel="noopener noreferrer">Explore Work <Icon name="arrow" className="h-4 w-4" /></Link>
+            <Link className="rounded-full border border-brand-copper/50 bg-white/70 px-5 py-3 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:border-brand-copper" href="/insights" target="_blank" rel="noopener noreferrer">Read Writing</Link>
+            <Link className="rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href="/journey" target="_blank" rel="noopener noreferrer">Professional Journey</Link>
+            <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href={siteConfig.links.linkedin} target="_blank" rel="noopener noreferrer"><Icon name="linkedin" className="h-4 w-4" /> LinkedIn</Link>
+            <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href={siteConfig.links.github} target="_blank" rel="noopener noreferrer"><Icon name="github" className="h-4 w-4" /> GitHub</Link>
           </div>
         </div>
-        <aside className="overflow-hidden rounded-[2rem] border border-brand-copper/25 bg-white/75 shadow-xl shadow-brand-navy/10 backdrop-blur dark:border-ink-800 dark:bg-ink-900/50">
+        <aside className="overflow-hidden rounded-[2rem] border border-brand-copper/25 bg-white/75 shadow-xl shadow-brand-navy/10 backdrop-blur">
           <div className="relative aspect-[4/5]">
             <Image
               src="/images/chethan-portrait.jpg"
@@ -59,10 +57,10 @@ export default function HomePage() {
               className="object-cover object-center"
             />
           </div>
-          <div className="border-t border-brand-copper/20 bg-brand-sand/70 p-6 dark:border-ink-800 dark:bg-ink-900/80">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-blue dark:text-brand-sand">Chethan Puttegowda</p>
-            <p className="mt-2 text-2xl font-semibold text-brand-navy dark:text-white">Technology leader, AI practitioner, systems thinker</p>
-            <p className="mt-4 text-sm leading-6 text-ink-700 dark:text-ink-300">I care about AI that is useful, analytics that drives judgment, and systems that remain accountable in real operating environments.</p>
+          <div className="border-t border-brand-copper/20 bg-brand-sand/70 p-6">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-blue">Chethan Puttegowda</p>
+            <p className="mt-2 text-2xl font-semibold text-brand-navy">Technology leader, AI practitioner, systems thinker</p>
+            <p className="mt-4 text-sm leading-6 text-ink-700">I care about AI that is useful, analytics that drives judgment, and systems that remain accountable in real operating environments.</p>
           </div>
         </aside>
       </section>
@@ -70,8 +68,8 @@ export default function HomePage() {
       <Section eyebrow="Current Focus" title="Where my work is focused" description="The work is broader than AI alone, but AI leadership is an important thread: how intelligent systems, analytics, governance, people, and execution come together responsibly.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {focusAreas.map((area) => (
-            <div key={area.title} className="rounded-3xl border border-brand-copper/20 bg-white/70 p-5 text-lg font-medium text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-1 hover:border-brand-copper/50 hover:shadow-lg hover:shadow-brand-navy/10 dark:border-ink-800 dark:bg-ink-900/40 dark:text-white">
-              <span className="mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-brand-sand text-brand-navy dark:bg-ink-950 dark:text-brand-sand"><Icon name={area.icon} /></span>
+            <div key={area.title} className="rounded-3xl border border-brand-copper/20 bg-white/70 p-5 text-lg font-medium text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-1 hover:border-brand-copper/50 hover:shadow-lg hover:shadow-brand-navy/10">
+              <span className="mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-brand-sand text-brand-navy"><Icon name={area.icon} /></span>
               {area.title}
             </div>
           ))}

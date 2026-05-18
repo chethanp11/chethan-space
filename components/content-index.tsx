@@ -20,17 +20,17 @@ export function ContentIndex({ items, basePath }: { items: ContentItem[]; basePa
 
   return (
     <div>
-      <div className="mb-8 grid gap-4 rounded-2xl border border-brand-copper/20 bg-brand-sand/45 p-4 dark:border-ink-800 dark:bg-ink-900/40 md:grid-cols-[1fr_auto]">
+      <div className="mb-8 grid gap-4 rounded-2xl border border-brand-copper/20 bg-brand-sand/45 p-4 md:grid-cols-[1fr_auto]">
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search by topic, tag, or architecture pattern..."
-          className="rounded-xl border border-brand-copper/25 bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-brand-blue dark:border-ink-800 dark:bg-ink-950 dark:text-white"
+          className="rounded-xl border border-brand-copper/25 bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-brand-blue"
         />
         <select
           value={category}
           onChange={(event) => setCategory(event.target.value)}
-          className="rounded-xl border border-brand-copper/25 bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-brand-blue dark:border-ink-800 dark:bg-ink-950 dark:text-white"
+          className="rounded-xl border border-brand-copper/25 bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-brand-blue"
         >
           {categories.map((entry) => <option key={entry}>{entry}</option>)}
         </select>
@@ -38,7 +38,7 @@ export function ContentIndex({ items, basePath }: { items: ContentItem[]; basePa
       <div className="grid gap-5 md:grid-cols-2">
         {filtered.map((item) => <ContentCard key={item.slug} item={item} href={`${basePath}/${item.slug}`} />)}
       </div>
-      {filtered.length === 0 ? <p className="text-ink-600 dark:text-ink-300">No matching content found.</p> : null}
+      {filtered.length === 0 ? <p className="text-ink-600">No matching content found.</p> : null}
     </div>
   );
 }

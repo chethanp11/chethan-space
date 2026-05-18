@@ -30,14 +30,14 @@ export function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-navigation"
         onClick={() => setOpen((value) => !value)}
-        className="rounded-full border border-brand-copper/30 bg-white px-4 py-2 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 dark:border-ink-700 dark:bg-ink-900 dark:text-white"
+        className="rounded-full border border-brand-copper/30 bg-white px-4 py-2 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5"
       >
         {open ? 'Close' : 'Menu'}
       </button>
       {open ? (
         <div
           id="mobile-navigation"
-          className="fixed inset-x-0 bottom-0 top-[72px] z-[100] overflow-y-auto border-t border-brand-copper/20 bg-brand-ivory px-5 py-5 shadow-2xl shadow-brand-navy/20 dark:border-ink-800 dark:bg-ink-950"
+          className="fixed inset-x-0 bottom-0 top-[72px] z-[100] overflow-y-auto border-t border-brand-copper/20 bg-brand-ivory px-5 py-5 shadow-2xl shadow-brand-navy/20"
         >
           <nav className="mx-auto grid max-w-content gap-2">
             {navItems.map((item) => {
@@ -52,8 +52,8 @@ export function MobileNav() {
                   onClick={() => setOpen(false)}
                   className={`rounded-2xl px-4 py-4 text-base font-semibold transition ${
                     active
-                      ? 'bg-brand-navy text-white shadow-sm shadow-brand-navy/20 dark:bg-brand-sand dark:text-ink-950'
-                      : 'bg-white/80 text-ink-800 hover:bg-brand-sand hover:text-brand-navy dark:bg-ink-900/70 dark:text-ink-100 dark:hover:bg-ink-800 dark:hover:text-white'
+                      ? 'bg-brand-navy text-white shadow-sm shadow-brand-navy/20'
+                      : 'bg-white/80 text-ink-800 hover:bg-brand-sand hover:text-brand-navy'
                   }`}
                 >
                   {item.label}

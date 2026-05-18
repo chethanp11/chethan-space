@@ -7,7 +7,7 @@ export function HomeBack() {
         href="/"
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 rounded-full border border-brand-copper/25 bg-white/70 px-4 py-2 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 transition hover:border-brand-copper/60 hover:bg-white dark:border-ink-800 dark:bg-ink-900/50 dark:text-ink-100"
+        className="inline-flex items-center gap-2 rounded-full border border-brand-copper/25 bg-white/70 px-4 py-2 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 transition hover:border-brand-copper/60 hover:bg-white"
       >
         <span aria-hidden="true">←</span>
         Back to Home
