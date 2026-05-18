@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const item = getItem('insights', slug);
   if (!item) return {};
-  const images = item.coverImage ? [{ url: item.coverImage, width: 1200, height: 300, alt: item.title }] : undefined;
+  const images = item.coverImage ? [{ url: item.coverImage, width: 1200, height: 1200, alt: item.title }] : undefined;
   return {
     title: item.title,
     description: item.summary,
@@ -35,17 +35,21 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
   return (
     <>
       <HomeBack href="/insights" label="Back to Thoughts" />
-      {item.coverImage ? (
-        <div className="mx-auto max-w-content px-5 pt-6">
-          <Image src={item.coverImage} alt={item.title} width={1200} height={300} className="h-auto w-full rounded-[2rem] object-cover shadow-lg shadow-brand-navy/10" priority />
+      <section className="mx-auto max-w-content px-5 pt-6">
+        <div className="grid gap-6 lg:grid-cols-[320px_1fr] lg:items-stretch">
+          {item.coverImage ? (
+            <div className="overflow-hidden rounded-[2rem] border border-brand-copper/20 bg-white/70 shadow-lg shadow-brand-navy/10">
+              <Image src={item.coverImage} alt={item.title} width={1200} height={1200} className="aspect-square h-full w-full object-cover" priority />
+            </div>
+          ) : null}
+          <PageBanner tone="writing" eyebrow={item.category} title={item.title} description={item.summary}>
+            <div className="space-y-4">
+              <TagList tags={item.tags} />
+              <p className="text-sm text-ink-600 dark:text-ink-300">{formatDate(item.date)} · {item.readingTime}</p>
+            </div>
+          </PageBanner>
         </div>
-      ) : null}
-      <PageBanner tone="writing" eyebrow={item.category} title={item.title} description={item.summary}>
-        <div className="space-y-4">
-          <TagList tags={item.tags} />
-          <p className="text-sm text-ink-600 dark:text-ink-300">{formatDate(item.date)} · {item.readingTime}</p>
-        </div>
-      </PageBanner>
+      </section>
       <article className="mx-auto max-w-content px-5 py-14">
         <div className="prose prose-ink max-w-prose dark:prose-invert prose-headings:tracking-tight prose-a:text-ink-950 dark:prose-a:text-white">
           <MDXRemote source={item.body} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [[rehypePrettyCode, { theme: 'github-dark' }]] } }} />
