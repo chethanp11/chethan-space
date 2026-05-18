@@ -15,10 +15,9 @@ export const siteConfig = {
 
 export const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
   { href: '/journey', label: 'Journey' },
   { href: '/projects', label: 'Projects' },
-  { href: '/insights', label: 'Writing' },
+  { href: '/insights', label: 'Thoughts' },
   { href: '/beyond-work', label: 'Beyond Work' },
   { href: '/contact', label: 'Contact' }
 ] as const;

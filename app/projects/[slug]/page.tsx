@@ -27,7 +27,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   if (!item) notFound();
   return (
     <>
-      <HomeBack />
+      <HomeBack href="/projects" label="Back to Projects" />
       <PageBanner tone="projects" eyebrow={`${item.category} · ${item.status ?? 'Project'}`} title={item.title} description={item.summary}>
         <div className="space-y-4">
           <TagList tags={item.tags} />

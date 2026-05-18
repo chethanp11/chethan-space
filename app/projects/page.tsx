@@ -27,7 +27,7 @@ export default function ProjectsPage() {
     >
       <div className="flex flex-wrap gap-2">
         {projectSections.map((section) => (
-          <a key={section.href} href={section.href} target="_blank" rel="noopener noreferrer" className="rounded-full border border-brand-copper/30 bg-white/70 px-4 py-2 text-sm font-semibold text-brand-navy transition hover:bg-brand-navy hover:text-white dark:border-ink-700 dark:bg-ink-900/60 dark:text-ink-100 dark:hover:bg-brand-sand dark:hover:text-ink-950">
+          <a key={section.href} href={section.href} className="rounded-full border border-brand-copper/30 bg-white/70 px-4 py-2 text-sm font-semibold text-brand-navy transition hover:bg-brand-navy hover:text-white dark:border-ink-700 dark:bg-ink-900/60 dark:text-ink-100 dark:hover:bg-brand-sand dark:hover:text-ink-950">
             {section.label}
           </a>
         ))}

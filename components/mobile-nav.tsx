@@ -46,8 +46,6 @@ export function MobileNav() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   aria-current={active ? 'page' : undefined}
                   onClick={() => setOpen(false)}
                   className={`rounded-2xl px-4 py-4 text-base font-semibold transition ${

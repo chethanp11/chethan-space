@@ -16,7 +16,7 @@ const contacts: Array<{ label: string; value: string; href: string; icon: IconNa
 export default function ContactPage() {
   return <>
     <HomeBack />
-    <PageBanner tone="contact" eyebrow="Contact" title="Connect for ideas, collaboration, or professional conversations" description="For technology leadership, AI and analytics work, writing, learning initiatives, or professional opportunities, these are the best ways to reach me." />
+    <PageBanner tone="contact" eyebrow="Contact" title="Connect for ideas, collaboration, or professional conversations" description="For technology leadership, AI and analytics work, thoughts, learning initiatives, or professional opportunities, these are the best ways to reach me." />
     <section className="mx-auto max-w-content px-5 py-14 sm:py-16">
       <div className="grid gap-4 md:grid-cols-3">
         {contacts.map((contact) => (

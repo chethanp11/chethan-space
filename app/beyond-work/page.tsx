@@ -16,18 +16,18 @@ const hobbies = [
     linkLabel: 'View SiriBhoomi Organic Farm'
   },
   {
-    title: 'Teaching AI and technology to kids',
+    title: 'Mentoring Young Builders',
     summary: 'Helping young learners see technology as something they can understand, question, build with, and use responsibly.',
-    detail: 'I enjoy making technology less intimidating and more creative. With kids, the focus is curiosity, confidence, judgment, and responsible use — not hype. Teaching also forces me to explain ideas simply, which improves how I think and communicate professionally.',
-    link: '',
-    linkLabel: ''
+    detail: 'I coach young makers through a structured 10-week workshop that uses AI tools like Codex to build real projects. The plan covers idea discovery, prompt design, code collaboration, prototype development, testing, iteration, and presentation so participants can confidently create with AI and learn the discipline behind responsible tool use.',
+    link: '/workshop-interest',
+    linkLabel: 'Know about the 10-week workshop'
   },
   {
-    title: 'Writing and learning in public',
+    title: 'Thoughts and learning in public',
     summary: 'Turning work, reading, experiments, and reflections into notes that can compound over time.',
-    detail: 'Writing helps me clarify what I believe, test ideas, and make my thinking useful to others. This website is intended to become a steady record of that learning.',
+    detail: 'Sharing thoughts helps me clarify what I believe, test ideas, and make my thinking useful to others. This website is intended to become a steady record of that learning.',
     link: '/insights',
-    linkLabel: 'Read my writing'
+    linkLabel: 'Read my thoughts'
   }
 ];
 
@@ -35,14 +35,14 @@ export default function BeyondWorkPage() {
   return (
     <>
       <HomeBack />
-      <PageBanner tone="beyond" eyebrow="Beyond Work" title="The interests that keep my work grounded" description="Professional work is only one part of the story. Farming, teaching, writing, and learning shape how I think about patience, responsibility, systems, and long-term impact." />
+      <PageBanner tone="beyond" eyebrow="Beyond Work" title="The interests that keep my work grounded" description="Professional work is only one part of the story. Farming, teaching, thoughts, and learning shape how I think about patience, responsibility, systems, and long-term impact." />
       <section className="mx-auto max-w-content px-5 py-14 sm:py-16">
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {hobbies.map((hobby) => (
             <article key={hobby.title} className="rounded-3xl border border-brand-copper/25 bg-white/75 p-7 shadow-sm shadow-ink-900/5 dark:border-ink-800 dark:bg-ink-900/40">
               <h2 className="text-2xl font-semibold tracking-tight text-brand-navy dark:text-white">{hobby.title}</h2>
               <p className="mt-4 text-lg leading-8 text-ink-800 dark:text-ink-200">{hobby.summary}</p>
-              <p className="mt-4 leading-7 text-ink-700 dark:text-ink-300">{hobby.detail}</p>
+              {hobby.detail ? <p className="mt-4 leading-7 text-ink-700 dark:text-ink-300">{hobby.detail}</p> : null}
               {hobby.link ? (
                 <a href={hobby.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex text-sm font-semibold text-brand-blue underline underline-offset-4 dark:text-brand-sand">
                   {hobby.linkLabel}

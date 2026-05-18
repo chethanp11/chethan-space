@@ -17,7 +17,7 @@ const principles: Array<[string, string, IconName]> = [
   ['Build with purpose', 'Technology should clarify work, improve decisions, and respect the people who depend on it.', 'spark'],
   ['Think in systems', 'Durable outcomes come from understanding relationships between people, process, data, tools, and incentives.', 'systems'],
   ['Stay grounded', 'The best professional work remains connected to real-world responsibility, learning, and community.', 'farm'],
-  ['Make knowledge reusable', 'Writing, frameworks, and projects should compound into assets others can learn from and apply.', 'analytics']
+  ['Make knowledge reusable', 'Thoughts, frameworks, and projects should compound into assets others can learn from and apply.', 'analytics'],
 ];
 
 export default function HomePage() {
@@ -45,28 +45,31 @@ export default function HomePage() {
           </div>
         </aside>
         <div>
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-brand-copper/25 bg-white/65 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-blue shadow-sm shadow-ink-900/5">
-            <Icon name="spark" className="h-4 w-4" />
-            AI Leadership · Analytics · Governance · Systems
-          </p>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div>
+          <div className="mb-6">
+            <h1 className="text-4xl font-semibold tracking-tight text-brand-navy sm:text-5xl">Chethan Puttegowda</h1>
+            <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-brand-copper/25 bg-white/65 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-brand-blue shadow-sm shadow-ink-900/5">
+              <Icon name="spark" className="h-4 w-4" />
+              AI Leadership · Analytics · Governance · Systems
+            </p>
+          </div>
+          <div className="grid gap-8 divide-y divide-brand-copper/20">
+            <div className="space-y-4 py-8">
               <h2 className="text-2xl font-semibold tracking-[-0.035em] text-brand-navy">Vision</h2>
-              <p className="mt-4 text-lg leading-8 text-ink-700">
+              <p className="text-lg leading-8 text-ink-700">
                 I help shape practical AI, analytics, and technology systems for serious enterprise work. My work sits at the intersection of AI leadership, analytics transformation, governance, workflow architecture, and enterprise execution.
               </p>
             </div>
-            <div>
+            <div className="space-y-4 py-8">
               <h2 className="text-2xl font-semibold tracking-[-0.035em] text-brand-navy">Mission</h2>
-              <p className="mt-4 text-lg leading-8 text-ink-700">
-                I use this space to share the systems I build, the lessons I learn, and the thinking behind my professional journey. Through writing, frameworks, and projects, I aim to help others understand how intelligent systems, analytics, governance, people, and execution come together responsibly.
+              <p className="text-lg leading-8 text-ink-700">
+                I use this space to share the systems I build, the lessons I learn, and the thinking behind my professional journey. Through thoughts, frameworks, and projects, I aim to help others understand how intelligent systems, analytics, governance, people, and execution come together responsibly.
               </p>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link className="inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/20 transition hover:-translate-y-0.5 hover:bg-brand-blue" href="/projects" target="_blank" rel="noopener noreferrer">Explore Work <Icon name="arrow" className="h-4 w-4" /></Link>
-            <Link className="rounded-full border border-brand-copper/50 bg-white/70 px-5 py-3 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:border-brand-copper" href="/insights" target="_blank" rel="noopener noreferrer">Read Writing</Link>
-            <Link className="rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href="/journey" target="_blank" rel="noopener noreferrer">Professional Journey</Link>
+            <Link className="inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/20 transition hover:-translate-y-0.5 hover:bg-brand-blue" href="/projects">Explore Work <Icon name="arrow" className="h-4 w-4" /></Link>
+            <Link className="rounded-full border border-brand-copper/50 bg-white/70 px-5 py-3 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:border-brand-copper" href="/insights">Read Thoughts</Link>
+            <Link className="rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href="/journey">Professional Journey</Link>
             <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href={siteConfig.links.linkedin} target="_blank" rel="noopener noreferrer"><Icon name="linkedin" className="h-4 w-4" /> LinkedIn</Link>
             <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href={siteConfig.links.github} target="_blank" rel="noopener noreferrer"><Icon name="github" className="h-4 w-4" /> GitHub</Link>
           </div>
@@ -88,7 +91,7 @@ export default function HomePage() {
         <div className="grid gap-5 md:grid-cols-3">{projects.map((item) => <ContentCard key={item.slug} item={item} href={`/projects/${item.slug}`} />)}</div>
       </Section>
 
-      <Section eyebrow="Writing" title="Latest notes and insights" description="Professional writing on technology, leadership, enterprise AI, analytics, governance, systems thinking, and practical execution.">
+      <Section eyebrow="Thoughts" title="Latest notes and insights" description="Professional thoughts on technology, leadership, enterprise AI, analytics, governance, systems thinking, and practical execution.">
         <div className="grid gap-5 md:grid-cols-3">{insights.map((item) => <ContentCard key={item.slug} item={item} href={`/insights/${item.slug}`} />)}</div>
       </Section>
 

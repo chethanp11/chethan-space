@@ -90,7 +90,7 @@ const journey = [
     details: [
       'Building systems and frameworks to clarify how AI, analytics, knowledge, and human review can work together.',
       'Experimenting with practical implementations and documenting lessons for reuse.',
-      'Contributing to AI community learning through writing, prototypes, and applied systems thinking.'
+      'Contributing to AI community learning through thoughts, prototypes, and applied systems thinking.'
     ]
   }
 ];
@@ -116,7 +116,7 @@ export default function JourneyPage() {
               <p className="flex items-center gap-2 text-sm font-semibold text-brand-navy dark:text-white"><Icon name="briefcase" className="h-4 w-4" /> Timeline</p>
               <div className="mt-5 space-y-1 border-l border-brand-copper/40 pl-4 dark:border-ink-700">
                 {journey.map((item) => (
-                  <a key={`${item.years}-${item.organization}`} href={`#${anchorFor(item.period)}`} target="_blank" rel="noopener noreferrer" className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-700 transition hover:bg-brand-sand hover:text-brand-navy focus:bg-brand-navy focus:text-white dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-white">
+                  <a key={`${item.years}-${item.organization}`} href={`#${anchorFor(item.period)}`} className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-700 transition hover:bg-brand-sand hover:text-brand-navy focus:bg-brand-navy focus:text-white dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-white">
                     <span className="block font-semibold text-brand-blue dark:text-brand-sand">{item.years}</span>
                     {item.organization}
                   </a>

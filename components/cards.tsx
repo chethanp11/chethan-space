@@ -17,7 +17,7 @@ export function TagList({ tags }: { tags: string[] }) {
 
 export function ContentCard({ item, href }: { item: ContentItem; href: string }) {
   return (
-    <Link href={href} target="_blank" rel="noopener noreferrer" className="group relative block overflow-hidden rounded-3xl border border-brand-copper/20 bg-white/80 p-6 shadow-sm shadow-ink-900/5 transition duration-300 hover:-translate-y-1 hover:border-brand-copper/60 hover:bg-white hover:shadow-xl hover:shadow-brand-navy/10">
+    <Link href={href} className="group relative block overflow-hidden rounded-3xl border border-brand-copper/20 bg-white/80 p-6 shadow-sm shadow-ink-900/5 transition duration-300 hover:-translate-y-1 hover:border-brand-copper/60 hover:bg-white hover:shadow-xl hover:shadow-brand-navy/10">
       <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-gradient-to-br from-brand-blue/10 to-brand-copper/15 transition group-hover:scale-125" />
       <div className="mb-4 flex items-center justify-between gap-4 text-xs uppercase tracking-[0.18em] text-brand-blue">
         <span>{item.category}</span>

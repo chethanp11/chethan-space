@@ -27,7 +27,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
   if (!item) notFound();
   return (
     <>
-      <HomeBack />
+      <HomeBack href="/insights" label="Back to Thoughts" />
       <PageBanner tone="writing" eyebrow={item.category} title={item.title} description={item.summary}>
         <div className="space-y-4">
           <TagList tags={item.tags} />
