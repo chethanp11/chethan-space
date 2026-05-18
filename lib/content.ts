@@ -16,6 +16,7 @@ export type ContentMeta = {
   status?: string;
   featured?: boolean;
   coverImage?: string;
+  featureImage?: string;
   readingTime: string;
   slug: string;
   kind: ContentKind;
@@ -64,6 +65,7 @@ export function getCollection(kind: ContentKind): ContentItem[] {
         status: typeof data.status === 'string' ? data.status : undefined,
         featured: Boolean(data.featured),
         coverImage: typeof data.coverImage === 'string' ? data.coverImage : undefined,
+        featureImage: typeof data.featureImage === 'string' ? data.featureImage : (typeof data.coverImage === 'string' ? data.coverImage : undefined),
         readingTime: typeof data.readingTime === 'string' ? data.readingTime : readingTime(content).text,
         body: content
       } satisfies ContentItem;

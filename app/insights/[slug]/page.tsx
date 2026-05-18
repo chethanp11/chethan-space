@@ -19,12 +19,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const item = getItem('insights', slug);
   if (!item) return {};
-  const images = item.coverImage ? [{ url: item.coverImage, width: 1200, height: 1200, alt: item.title }] : undefined;
+  const featureImage = item.featureImage ?? item.coverImage;
+  const images = featureImage ? [{ url: featureImage, width: 1200, height: 1200, alt: item.title }] : undefined;
   return {
     title: item.title,
     description: item.summary,
     openGraph: { title: item.title, description: item.summary, type: 'article', publishedTime: item.date, images },
-    twitter: { card: 'summary_large_image', title: item.title, description: item.summary, images: item.coverImage ? [item.coverImage] : undefined }
+    twitter: { card: 'summary_large_image', title: item.title, description: item.summary, images: featureImage ? [featureImage] : undefined }
   };
 }
 
@@ -32,14 +33,15 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const item = getItem('insights', slug);
   if (!item) notFound();
+  const featureImage = item.featureImage ?? item.coverImage;
   return (
     <>
       <HomeBack href="/insights" label="Back to Thoughts" />
       <section className="mx-auto max-w-content px-5 pt-6">
         <div className="grid gap-6 lg:grid-cols-[320px_1fr] lg:items-stretch">
-          {item.coverImage ? (
+          {featureImage ? (
             <div className="overflow-hidden rounded-[2rem] border border-brand-copper/20 bg-white/70 shadow-lg shadow-brand-navy/10">
-              <Image src={item.coverImage} alt={item.title} width={1200} height={1200} className="aspect-square h-full w-full object-cover" priority />
+              <Image src={featureImage} alt={item.title} width={1200} height={1200} className="aspect-square h-full w-full object-cover" priority />
             </div>
           ) : null}
           <PageBanner tone="writing" eyebrow={item.category} title={item.title} description={item.summary}>
