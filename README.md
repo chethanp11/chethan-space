@@ -1,6 +1,6 @@
-# Chethan Space
+# Chethan Puttegowda
 
-A content-driven professional website for Chethan P covering technology leadership, AI and analytics practice, systems thinking, projects, and writing.
+A content-driven professional website for Chethan Puttegowda covering technology leadership, AI and analytics practice, systems thinking, projects, and writing.
 
 ## Stack
 

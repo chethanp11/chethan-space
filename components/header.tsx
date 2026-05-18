@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { navItems, siteConfig } from '@/lib/site';
+import { siteConfig } from '@/lib/site';
 import { ThemeToggle } from './theme-toggle';
 import { MobileNav } from './mobile-nav';
+import { NavLinks } from './nav-links';
 
 export function Header() {
   return (
@@ -10,13 +11,7 @@ export function Header() {
         <Link href="/" className="font-semibold tracking-tight text-brand-navy dark:text-white">
           {siteConfig.author}
         </Link>
-        <nav className="hidden items-center gap-5 text-sm text-ink-700 dark:text-ink-300 lg:gap-6 md:flex">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="transition hover:text-brand-blue dark:hover:text-white">
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+        <NavLinks />
         <div className="flex items-center gap-3">
           <div className="hidden md:block"><ThemeToggle /></div>
           <MobileNav />

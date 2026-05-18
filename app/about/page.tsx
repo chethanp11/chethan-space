@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HomeBack } from '@/components/home-back';
+import { PageBanner } from '@/components/page-banner';
 import { Section } from '@/components/section';
 
 export const metadata: Metadata = { title: 'About', description: 'Professional narrative, personal values, expertise, leadership areas, and current mission.' };
@@ -38,18 +39,20 @@ export default function AboutPage() {
   return (
     <>
       <HomeBack />
+      <PageBanner
+        tone="about"
+        eyebrow="About"
+        title="I build systems, write to clarify thinking, and stay grounded in practical outcomes"
+        description="I work at the intersection of technology leadership, AI architecture, analytics transformation, workflow design, and enterprise governance."
+      />
       <section className="mx-auto grid max-w-content gap-10 px-5 py-14 sm:py-16 lg:grid-cols-[1fr_360px] lg:items-start">
-        <div>
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand-blue dark:text-brand-sand">About</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-brand-navy dark:text-white sm:text-5xl">I build systems, write to clarify thinking, and stay grounded in practical outcomes.</h1>
-          <div className="prose prose-ink mt-8 max-w-prose dark:prose-invert">
-            <p>I work at the intersection of technology leadership, AI architecture, analytics transformation, workflow design, and enterprise governance. I care about systems that survive contact with real organizations: constraints, accountability, data quality, adoption friction, and measurable outcomes.</p>
-            <p>This website is where I share the work, notes, frameworks, and personal commitments that shape my professional journey. My AI work is an important part of that story, but it is not the whole story. I am interested in how technology, people, learning, and responsibility come together over time.</p>
-          </div>
+        <div className="prose prose-ink max-w-prose dark:prose-invert">
+          <p>I care about systems that survive contact with real organizations: constraints, accountability, data quality, adoption friction, and measurable outcomes.</p>
+          <p>This website is where I share the work, notes, frameworks, and personal commitments that shape my professional journey. My AI work is an important part of that story, but it is not the whole story. I am interested in how technology, people, learning, and responsibility come together over time.</p>
         </div>
         <div className="overflow-hidden rounded-3xl border border-brand-copper/25 bg-white/70 shadow-lg shadow-brand-navy/10 dark:border-ink-800 dark:bg-ink-900/40">
           <div className="relative aspect-[4/5]">
-            <Image src="/images/chethan-formal.jpg" alt="Chethan P in formal attire" fill sizes="(min-width: 1024px) 360px, 100vw" className="object-cover object-center" />
+            <Image src="/images/chethan-formal.jpg" alt="Chethan Puttegowda in formal attire" fill sizes="(min-width: 1024px) 360px, 100vw" className="object-cover object-center" />
           </div>
           <div className="border-t border-brand-copper/20 bg-brand-sand/70 p-5 text-sm leading-6 text-ink-700 dark:border-ink-800 dark:bg-ink-900/80 dark:text-ink-300">
             Technology, analytics, AI, governance, education, and grounded systems thinking.

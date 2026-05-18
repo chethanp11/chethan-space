@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import { HomeBack } from '@/components/home-back';
+import { PageBanner } from '@/components/page-banner';
 
 export const metadata: Metadata = {
   title: 'Beyond Work',
-  description: 'The interests and commitments that keep Chethan P grounded beyond professional work.'
+  description: 'The interests and commitments that keep Chethan Puttegowda grounded beyond professional work.'
 };
 
 const hobbies = [
@@ -34,14 +35,9 @@ export default function BeyondWorkPage() {
   return (
     <>
       <HomeBack />
+      <PageBanner tone="beyond" eyebrow="Beyond Work" title="The interests that keep my work grounded" description="Professional work is only one part of the story. Farming, teaching, writing, and learning shape how I think about patience, responsibility, systems, and long-term impact." />
       <section className="mx-auto max-w-content px-5 py-14 sm:py-16">
-        <div className="max-w-3xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand-blue dark:text-brand-sand">Beyond Work</p>
-          <h1 className="text-4xl font-semibold tracking-tight text-brand-navy dark:text-white sm:text-5xl">The interests that keep my work grounded.</h1>
-          <p className="mt-5 text-lg leading-8 text-ink-700 dark:text-ink-300">Professional work is only one part of the story. Farming, teaching, writing, and learning shape how I think about patience, responsibility, systems, and long-term impact.</p>
-        </div>
-
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {hobbies.map((hobby) => (
             <article key={hobby.title} className="rounded-3xl border border-brand-copper/25 bg-white/75 p-7 shadow-sm shadow-ink-900/5 dark:border-ink-800 dark:bg-ink-900/40">
               <h2 className="text-2xl font-semibold tracking-tight text-brand-navy dark:text-white">{hobby.title}</h2>

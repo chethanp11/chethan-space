@@ -48,7 +48,7 @@ export default function HomePage() {
           <div className="relative aspect-[4/5]">
             <Image
               src="/images/chethan-portrait.jpg"
-              alt="Chethan P"
+              alt="Chethan Puttegowda"
               fill
               priority
               sizes="(min-width: 1024px) 400px, 100vw"
@@ -56,7 +56,7 @@ export default function HomePage() {
             />
           </div>
           <div className="border-t border-brand-copper/20 bg-brand-sand/70 p-6 dark:border-ink-800 dark:bg-ink-900/80">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-blue dark:text-brand-sand">Chethan P</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-blue dark:text-brand-sand">Chethan Puttegowda</p>
             <p className="mt-2 text-2xl font-semibold text-brand-navy dark:text-white">Technology leader, AI practitioner, systems thinker</p>
             <p className="mt-4 text-sm leading-6 text-ink-700 dark:text-ink-300">I care about AI that is useful, analytics that drives judgment, and systems that remain accountable in real operating environments.</p>
           </div>
