@@ -10,15 +10,27 @@ export const metadata: Metadata = {
 
 const journey = [
   {
+    period: '2024 to Now AI Community Contributions',
+    years: '2024–Now',
+    organization: 'AI Community Contributions',
+    role: 'Independent AI systems, frameworks, experimentation, and community contribution',
+    context: 'Developing practical AI systems, reusable frameworks, experiments, and public thinking that help others understand how AI, analytics, knowledge, and human review can work together responsibly.',
+    details: [
+      'Building independent systems and frameworks around practical AI adoption, knowledge workflows, governance, and analytics transformation.',
+      'Publishing applied thoughts and prototypes that translate enterprise analytics, AML, remediation, and AI transformation experience into reusable learning.',
+      'Contributing to AI community learning through hands-on examples, responsible tool-use patterns, and systems thinking.'
+    ]
+  },
+  {
     period: '2025 to Now',
     years: '2025–Now',
     organization: 'Citi AI Transformation workgroup',
     role: 'AI transformation contributor',
-    context: 'Contributing to AI transformation work, practical use cases, responsible adoption, and the enterprise operating model needed for AI-enabled execution.',
+    context: 'Contributing to enterprise AI transformation with focus on practical use cases, responsible adoption, workflow design, and governance-aware operating models.',
     details: [
-      'Contributing to AI transformation from the lens of analytics, governance, workflows, and real enterprise adoption.',
-      'Focusing on practical AI use cases that improve work without weakening accountability.',
-      'Exploring how AI can become a responsible capability layer across business and analytics workflows.'
+      'Contributing to AI transformation from the lens of analytics leadership, governance, workflow design, and enterprise adoption.',
+      'Helping identify practical AI use cases that improve work while preserving accountability, traceability, and review discipline.',
+      'Connecting AI adoption with data quality, stakeholder engagement, change management, and scalable operating practices.'
     ]
   },
   {
@@ -26,23 +38,11 @@ const journey = [
     years: '2024–Now',
     organization: 'Citi Business Analysis',
     role: 'Remediation Business Analytics leader',
-    context: 'Leading business analytics for remediation, connecting analytics execution with business outcomes, governance needs, and operating decisions.',
+    context: 'Leading business analytics for remediation by connecting analytics execution, operating cadence, data interpretation, governance needs, and business decisions.',
     details: [
-      'Bridging analytical depth with business-facing interpretation and action.',
-      'Helping teams reason through performance, quality, remediation progress, and decision tradeoffs.',
-      'Continuing to strengthen the operating model around analytics, trust, and execution.'
-    ]
-  },
-  {
-    period: '2024 to Now Independent',
-    years: '2024–Now',
-    organization: 'Independent work',
-    role: 'Systems, frameworks, experimentation, and AI community contribution',
-    context: 'Developing independent systems, frameworks, experiments, and public thinking that contribute to practical AI learning and community knowledge.',
-    details: [
-      'Building systems and frameworks to clarify how AI, analytics, knowledge, and human review can work together.',
-      'Experimenting with practical implementations and documenting lessons for reuse.',
-      'Contributing to AI community learning through thoughts, prototypes, and applied systems thinking.'
+      'Translate complex remediation data into business-facing insights, decisions, performance measures, and action-oriented narratives.',
+      'Strengthen stakeholder trust through clear metric definitions, issue visibility, quality interpretation, and repeatable operating rhythm.',
+      'Apply change management, stakeholder engagement, resource planning, implementation discipline, and stabilization practices to analytics transformation work.'
     ]
   },
   {
@@ -50,35 +50,35 @@ const journey = [
     years: '2021–2024',
     organization: 'CITI Remediation data Analytics',
     role: 'Remediation Data Analytics leader',
-    context: 'Led remediation data analytics work with focus on data quality, governance, measurement, stakeholder trust, and scalable execution.',
+    context: 'Led remediation data analytics with focus on data quality, governance, measurement discipline, stakeholder trust, and scalable analytics execution.',
     details: [
-      'Led analytics work where business decisions depended on data quality, consistency, and clear interpretation.',
-      'Focused on remediation execution, operating cadence, stakeholder alignment, and governance needs.',
-      'Built reusable ways to turn complex data into trusted business understanding.'
+      'Built trusted analytics approaches where business decisions depended on data quality, consistency, lineage, and clear interpretation.',
+      'Applied data quality and governance discipline to remediation execution, measurement, and stakeholder reporting.',
+      'Drove analytics transformation through structured delivery, operating cadence, stakeholder engagement, implementation, and stabilization.'
     ]
   },
   {
     period: '2018 to 2021',
     years: '2018–2021',
     organization: 'Citi — Anti Money Laundering',
-    role: 'AML analytics and financial-crimes focus',
-    context: 'Focused on anti-money-laundering analytics, financial-crimes risk monitoring, control discipline, and governance-oriented execution.',
+    role: 'Regional Lead — AML Model Validation',
+    context: 'Served as APAC Regional Lead managing Independent Validation for AML scenarios, KYC risk scoring tools, and predictive models across multiple locations.',
     details: [
-      'Worked in a domain where explainability, traceability, and control quality matter deeply.',
-      'Built stronger judgment around risk analytics, data reliability, and accountable decision systems.',
-      'Connected analytical delivery with operational and regulatory expectations.'
+      'Managed an Independent Validation team of 15 FTE statisticians across Bangalore, Pune, and Kuala Lumpur.',
+      'Validated AML scenarios, KYC risk scoring tools, and predictive models with focus on explainability, traceability, and governance.',
+      'Worked across Anti-Money Laundering, Model Validation, Transaction Monitoring, KYC, Watch-list, Sanctions, Risk Rating Methodology, and Compliance Testing.'
     ]
   },
   {
     period: '2012 to 2018',
     years: '2012–2018',
     organization: 'TCS - Bank of America',
-    role: 'Leading delivery for AML application and Transformation to address consent order',
-    context: 'Led delivery for AML application work and transformation initiatives focused on addressing consent-order requirements in a highly governed enterprise environment.',
+    role: 'Delivery Head — Financial Crimes and AML Transformation',
+    context: 'Led Financial Crimes and Operational Analytics delivery for Bank of America, transforming manual risk monitoring into an analytics-driven, technology-managed AML application program.',
     details: [
-      'Led delivery execution across AML application priorities, stakeholder coordination, and controlled implementation needs.',
-      'Supported transformation work tied to consent-order remediation, operating discipline, and measurable delivery outcomes.',
-      'Deepened financial-services domain experience across AML, risk, controls, and enterprise transformation.'
+      'Set up a diverse 35 FTE team of risk managers, analysts, developers, and validators to transform manual Risk Monitoring through threshold analysis, validation, and implementation.',
+      'Managed transformation within an $8 million budget and built a multi-location delivery model for Financial Crimes and Operational Analytics.',
+      'Headed end-to-end execution for 3 major AML MRA projects covering OCC 11-12, 12 CFR Part 30, and 12 CFR 21.11, avoiding penalty exposure of approximately $300 million.'
     ]
   },
   {
@@ -86,11 +86,11 @@ const journey = [
     years: 'Foundation',
     organization: 'HSBC and Target',
     role: 'Analytics and business technology foundation',
-    context: 'Built the early foundation in analytics, business problem solving, delivery discipline, and stakeholder-centered execution.',
+    context: 'Built the foundation in analytics, business problem solving, customer intelligence, delivery discipline, and stakeholder-centered execution.',
     details: [
-      'Developed a practical understanding of how analytics work must connect to real business decisions.',
-      'Built habits around execution quality, communication, measurement, and operational usefulness.',
-      'Established the base for later leadership across financial services, risk, analytics, and transformation.'
+      'Drove HSBC strategic initiatives across Wealth Management, Customer Acquisition, and Cross/Up Selling wealth products to 2.4 million HNI customers.',
+      'Contributed to initiatives that drove $360 million in incremental sales through customer analytics and wealth management focus.',
+      'Built experience across customer acquisition, product propensity modelling, sales forecasting, wealth dashboards, market segmentation, clustering, and visual KPI dashboards.'
     ]
   }
 ];
@@ -111,48 +111,44 @@ const credentialsSections = [
   {
     title: 'Education',
     items: [
-      'Education details are not listed in the provided 2021 resume PDF.',
-      'The resume emphasizes professional depth across analytics leadership, financial crimes, AML, risk analytics, wealth management, and analytics transformation.'
+      'Master of Business Administration with specialisation in Finance, Christ College, Bangalore University, 2009.'
     ]
   },
   {
-    title: 'White papers',
+    title: 'Certifications',
     items: [
-      'White papers are not listed in the provided 2021 resume PDF.',
-      'The resume does list thought-leadership domains that now inform current writing: Anti-Money Laundering, Model Validation, Transaction Monitoring, KYC, Sanctions, Compliance Testing, Data Quality and Governance, and Analytics Transformation.'
-    ]
-  },
-  {
-    title: 'Accomplishments',
-    items: [
-      'Analytics leader with 12+ years of experience as of the 2021 resume, working across Financial Crimes, Anti-Money Laundering, Operational/Credit Risk Analytics, and Wealth Management for major global banks.',
-      'As APAC Regional Lead at Citi, managed an Independent Validation team of 15 FTE statisticians across Bangalore, Pune, and Kuala Lumpur.',
-      'At Citi, validation scope included AML scenarios, KYC risk scoring tool, and predictive models.',
-      'As Financial Crimes and Operational Analytics delivery head for Bank of America, transformed manual Risk Monitoring into an analytics-based, technology-managed program within an $8 million budget.',
-      'Built a 35 FTE multi-location analytics delivery team for Bank of America.',
-      'Headed a Financial Crimes team with end-to-end execution ownership for 3 major AML MRA projects: OCC 11-12, 12 CFR Part 30, and 12 CFR 21.11.',
-      'AML MRA execution avoided penalty exposure of approximately $300 million.',
-      'Drove HSBC strategic initiatives across Wealth Management, Customer Acquisition, and Cross/Up Selling wealth products to 2.4 million HNI customers, driving $360 million in incremental sales.',
-      'Built high-performance analytics teams with responsibility for hiring, coaching, performance evaluation, talent development, and retention.',
-      'Drove data-intelligence initiatives to improve customer engagement and mitigate operational risk.',
-      'Enabled analytics transformation through change management, stakeholder engagement, resource planning, implementation, and stabilization.'
+      'Certified SCRUM Master, SCRUM Alliance, 2017.',
+      'Web Intelligence and Big Data, IIIT - Coursera, 2017.',
+      'Certified Statistical Business Analyst Using SAS 9 – Regression and Modelling, SAS Institute, 2016.',
+      'Practical Machine Learning, Johns Hopkins University - Coursera, 2015.',
+      'Certified Advanced SAS Programmer for SAS 9, SAS Institute, 2013.',
+      'Certified Base SAS Programmer for SAS 9, SAS Institute, 2013.',
+      'NCFM: Derivatives Market, Capital Market, and Debt Market, NSE Academy, 2008.'
     ]
   },
   {
     title: 'Patents and publications',
     items: [
-      'Patents are not listed in the provided 2021 resume PDF.',
-      'Publications are not listed in the provided 2021 resume PDF.',
-      'The resume does list applied expertise areas that support current publications and articles: Predictive Modelling, Machine Learning, Visual Analytics, Segmentation, Clustering, Sampling Design, Descriptive Analysis, NLP, SAS, Python, Tableau, Teradata SQL, MS Excel Macros, AWS, and Bigdata-Spark.'
+      'Patent filed on IBM Early Warning System tool for corporate risk exposure, 2017, TCSL.',
+      'Patent filed on integrated AML tool for cognitive detection and visualization, 2017, TCSL.',
+      'Presented white paper on “Big Data – Predictive Analytics using SAS”, 2013, TCSL.',
+      'Academic thesis on “Comparative Analysis of Mutual Fund Schemes”, 2008, Christ College.'
+    ]
+  },
+  {
+    title: 'Awards',
+    items: [
+      'Received award by Executive Director for successful execution of 12 CFR – Part 30 Audit deliverable - TCS.',
+      'Received annual award for AML tool for cognitive detection and visualization - TCS.',
+      'Received SVP Award for end-to-end automation of forecast variance process - Target.',
+      'Awarded university merit scholarship for best academic performance.'
     ]
   },
   {
     title: 'Affiliations',
     items: [
-      'Citi: APAC Regional Lead managing Independent Validation work for AML scenarios, KYC risk scoring, and predictive models.',
-      'Bank of America: Financial Crimes and Operational Analytics delivery leadership for risk monitoring transformation.',
-      'HSBC: Strategic initiatives across Wealth Management, Customer Acquisition, and Cross/Up Selling wealth products.',
-      'Professional domain affiliations include Anti-Money Laundering, Model Validation, Transaction Monitoring, KYC, Watch-list, Sanctions, Risk Rating Methodology, Compliance Testing, Operational Risk and Control, Model Risk Management, Data Quality and Governance, Credit Risk Modelling, and VaR Analysis and Metrics.'
+      'Member of Association of Mutual Funds of India (AMFI).',
+      'Certified member of Insurance Regulatory Development Authority (IRDA).'
     ]
   }
 ];
@@ -165,7 +161,7 @@ export default function JourneyPage() {
         tone="journey"
         eyebrow="Professional Journey"
         title="A career shaped by analytics, remediation leadership, governance, and practical AI transformation"
-        description="The timeline connects my formal enterprise roles with independent systems work, experimentation, and contributions to the AI community."
+        description="The timeline starts with current AI community contributions and connects them with enterprise roles across analytics, AML, remediation, governance, and transformation."
       />
       <section className="mx-auto max-w-content px-5 py-14 sm:py-16">
         <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -214,7 +210,7 @@ export default function JourneyPage() {
         <div className="mt-14">
           <div className="mb-8">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand-blue dark:text-brand-sand">Beyond the timeline</p>
-            <h2 className="text-3xl font-semibold tracking-tight text-brand-navy dark:text-white">Education, white papers, accomplishments, patents and publications, and affiliations</h2>
+            <h2 className="text-3xl font-semibold tracking-tight text-brand-navy dark:text-white">Education, certifications, patents and publications, awards, and affiliations</h2>
           </div>
           <div className="grid gap-5 md:grid-cols-2">
             {credentialsSections.map((section) => (

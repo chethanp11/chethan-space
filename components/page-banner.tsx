@@ -16,10 +16,13 @@ type BannerTone = keyof typeof bannerStyles;
 export function PageBanner({ eyebrow, title, description, tone = 'about', children }: { eyebrow: string; title: string; description?: string; tone?: BannerTone; children?: ReactNode }) {
   return (
     <section className="mx-auto max-w-content px-5 pt-6">
-      <div className={`relative overflow-hidden rounded-[2rem] border border-brand-copper/25 bg-gradient-to-br ${bannerStyles[tone]} p-7 shadow-sm shadow-brand-navy/10 sm:p-9`}>
+      <div className={`relative overflow-hidden rounded-[2rem] border border-brand-copper/25 bg-gradient-to-br ${bannerStyles[tone]} p-7 shadow-sm shadow-brand-navy/10 ring-1 ring-white/60 sm:p-9`}>
         <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(18,48,71,.12)_1px,transparent_1px),linear-gradient(90deg,rgba(18,48,71,.12)_1px,transparent_1px)] [background-size:32px_32px]" />
+        <div className="absolute -right-24 -top-28 h-72 w-72 rounded-full bg-brand-blue/20 blur-2xl" />
+        <div className="absolute -bottom-28 left-1/3 h-72 w-72 rounded-full bg-brand-copper/20 blur-2xl" />
+        <div className="absolute bottom-0 left-0 h-1.5 w-full bg-gradient-to-r from-brand-blue via-brand-copper to-brand-sage" />
         <div className="relative max-w-3xl">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand-blue">{eyebrow}</p>
+          <p className="mb-3 inline-flex rounded-full bg-white/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-brand-blue shadow-sm shadow-ink-900/5">{eyebrow}</p>
           <h1 className="text-3xl font-semibold tracking-tight text-brand-navy sm:text-5xl">{title}</h1>
           {description ? <p className="mt-5 text-lg leading-8 text-ink-700">{description}</p> : null}
           {children ? <div className="mt-6">{children}</div> : null}

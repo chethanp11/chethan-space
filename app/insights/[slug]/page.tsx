@@ -18,7 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const item = getItem('insights', slug);
   if (!item) return {};
-  return { title: item.title, description: item.summary, openGraph: { title: item.title, description: item.summary, type: 'article', publishedTime: item.date } };
+  const images = item.coverImage ? [{ url: item.coverImage, width: 1200, height: 630, alt: item.title }] : undefined;
+  return {
+    title: item.title,
+    description: item.summary,
+    openGraph: { title: item.title, description: item.summary, type: 'article', publishedTime: item.date, images },
+    twitter: { card: 'summary_large_image', title: item.title, description: item.summary, images: item.coverImage ? [item.coverImage] : undefined }
+  };
 }
 
 export default async function InsightPage({ params }: { params: Promise<{ slug: string }> }) {
@@ -35,7 +41,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
         </div>
       </PageBanner>
       <article className="mx-auto max-w-content px-5 py-14">
-        {item.coverImage ? <img src={item.coverImage} alt="" className="mb-10 h-72 w-full rounded-[2rem] object-cover shadow-lg shadow-brand-navy/10" /> : null}
+        {item.coverImage ? <img src={item.coverImage} alt="" className="mb-10 aspect-[1200/630] w-full rounded-[2rem] object-cover shadow-lg shadow-brand-navy/10" /> : null}
         <div className="prose prose-ink max-w-prose dark:prose-invert prose-headings:tracking-tight prose-a:text-ink-950 dark:prose-a:text-white">
           <MDXRemote source={item.body} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [[rehypePrettyCode, { theme: 'github-dark' }]] } }} />
         </div>

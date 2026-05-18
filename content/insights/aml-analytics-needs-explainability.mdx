@@ -4,23 +4,42 @@ summary: Anti-money-laundering analytics succeeds when detection, investigation,
 date: '2025-12-05'
 tags: [AML, Financial Crimes, Explainability]
 category: Financial Crimes
-coverImage: /images/insights/governance.svg
+coverImage: /images/insights/aml-explainability.png
 readingTime: 5 min read
 ---
 
-AML analytics is not just a modeling problem. It is an accountable operating system where data, scenarios, thresholds, alerts, investigations, and regulatory expectations must connect.
+AML analytics is not just a modeling problem. It is an accountable operating system where scenarios, thresholds, customer context, transaction patterns, alerts, investigations, and regulatory expectations must connect. Scale is important, but scale without explainability can create operational risk instead of reducing it.
 
 ## Why explainability matters
 
-Teams need to understand why an alert fired, which data elements contributed, what changed over time, and whether the outcome can be defended. A model that cannot be explained creates friction for investigators and risk for the institution.
+In AML, the user of analytics is not only a data scientist. Investigators, model validators, compliance teams, audit teams, and regulators all need to understand how a signal was produced. They need to know what data contributed, what logic was applied, why a threshold changed, and whether the output can be defended.
 
-## Better operating pattern
+A model or scenario that cannot be explained creates downstream friction. Investigators may not trust the alert. Validators may challenge the assumptions. Governance teams may struggle to approve change. Business teams may see volume changes without understanding risk impact.
 
-- Keep lineage visible from source data to alert decision.
-- Document scenario intent and threshold logic.
-- Compare model performance with investigator feedback.
-- Treat governance as part of delivery, not an afterthought.
+## What should be visible
+
+Explainable AML analytics should make several elements visible:
+
+- Source data and lineage
+- Scenario intent and risk typology
+- Feature or rule contribution
+- Threshold rationale
+- Historical performance trends
+- Investigator feedback
+- Known limitations and compensating controls
+
+The goal is not to expose every technical detail to every user. The goal is to provide the right level of explanation for each decision point.
+
+## Governance and operations are connected
+
+AML analytics works best when governance is embedded in the operating rhythm. Scenario tuning, model validation, data quality checks, alert productivity, and investigation outcomes should not live in disconnected artifacts. They should inform each other.
+
+For example, investigator feedback should shape future tuning. Data quality issues should be linked to alert reliability. Validation findings should influence change priorities. Governance should improve the system, not simply approve or reject it.
+
+## Better design pattern
+
+A practical AML analytics design keeps detection logic, evidence, review, and measurement connected. It treats explainability as part of delivery. It also recognizes that AML is a human-machine workflow: analytics focuses attention, but accountable professionals make decisions.
 
 ## The practical goal
 
-Scale matters, but trusted scale matters more. AML analytics should help teams focus attention without weakening accountability.
+The goal is not maximum alert volume or maximum automation. The goal is trusted detection that improves risk coverage, reduces noise, supports investigation quality, and stands up to review. In financial crimes analytics, explainability is not a nice-to-have. It is the foundation for scale.

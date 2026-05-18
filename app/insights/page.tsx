@@ -9,7 +9,7 @@ export const metadata: Metadata = { title: 'Thoughts', description: 'Professiona
 export default function InsightsPage() {
   return <>
     <HomeBack />
-    <PageBanner tone="writing" eyebrow="Thoughts" title="Notes on technology, work, and systems" description="Essays, architecture notes, implementation insights, and reflections for colleagues and professional networks." />
+    <PageBanner tone="writing" eyebrow="Thoughts" title="Strategic perspectives on AI, analytics, governance, and enterprise transformation" description="Practical essays for leaders and builders working through responsible AI adoption, analytics modernization, financial-crimes controls, and knowledge-system design." />
     <section className="mx-auto max-w-content px-5 py-14 sm:py-16">
       <ContentIndex items={getCollection('insights')} basePath="/insights" />
     </section>
