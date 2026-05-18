@@ -1,6 +1,6 @@
 # Chethan Space
 
-A content-driven personal website for enterprise AI, analytics transformation, governance-first systems, projects, and technical writing.
+A content-driven professional website for Chethan P covering technology leadership, AI and analytics practice, systems thinking, projects, and writing.
 
 ## Stack
 

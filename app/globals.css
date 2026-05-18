@@ -15,11 +15,51 @@ html {
 }
 
 body {
-  @apply bg-white text-ink-950 antialiased dark:bg-ink-950 dark:text-ink-50;
+  @apply bg-brand-ivory text-ink-950 antialiased dark:bg-ink-950 dark:text-ink-50;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(31, 95, 139, 0.12), transparent 32rem),
+    radial-gradient(circle at 92% 10%, rgba(183, 121, 74, 0.12), transparent 30rem),
+    linear-gradient(180deg, rgba(244, 239, 231, 0.84), rgba(255, 253, 248, 0.94) 22rem, rgba(255, 253, 248, 1));
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(rgba(18, 48, 71, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 48, 71, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+}
+
+.dark body::before {
+  background:
+    radial-gradient(circle at 15% 0%, rgba(31, 95, 139, 0.20), transparent 32rem),
+    radial-gradient(circle at 92% 10%, rgba(183, 121, 74, 0.14), transparent 30rem),
+    linear-gradient(180deg, rgba(2, 6, 23, 1), rgba(15, 23, 42, 0.96) 24rem, rgba(2, 6, 23, 1));
+}
+
+.dark body::after {
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(244, 239, 231, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 239, 231, 0.08) 1px, transparent 1px);
 }
 
 ::selection {
-  @apply bg-ink-900 text-white dark:bg-ink-100 dark:text-ink-950;
+  @apply bg-brand-navy text-white dark:bg-brand-sand dark:text-ink-950;
 }
 
 .prose pre {

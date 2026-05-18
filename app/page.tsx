@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { ContentCard } from '@/components/cards';
 import { Section } from '@/components/section';
@@ -5,19 +6,19 @@ import { getFeatured } from '@/lib/content';
 import { siteConfig } from '@/lib/site';
 
 const focusAreas = [
-  'Agentic AI platforms',
-  'Knowledge systems',
-  'Workflow orchestration',
-  'Context engineering',
-  'Governance-first architectures',
-  'Enterprise intelligence systems'
+  'Technology leadership and platform thinking',
+  'Enterprise AI and analytics modernization',
+  'Knowledge systems and workflow design',
+  'Governance, trust, and responsible adoption',
+  'Natural farming and grounded systems learning',
+  'Technology education for young builders'
 ];
 
 const principles = [
-  ['Governance in execution', 'Control, auditability, and traceability should be designed into AI workflows from the first iteration.'],
-  ['Modular capability design', 'Useful AI systems are composed from reusable capabilities, not one-off demos.'],
-  ['Enterprise realism', 'Architecture must account for adoption friction, data quality, accountability, and operational constraints.'],
-  ['Intelligence orchestration', 'The durable value is in how models, data, tools, context, and humans coordinate.']
+  ['Build with purpose', 'Technology should clarify work, improve decisions, and respect the people who depend on it.'],
+  ['Think in systems', 'Durable outcomes come from understanding relationships between people, process, data, tools, and incentives.'],
+  ['Stay grounded', 'The best professional work remains connected to real-world responsibility, learning, and community.'],
+  ['Make knowledge reusable', 'Writing, frameworks, and projects should compound into assets others can learn from and apply.']
 ];
 
 export default function HomePage() {
@@ -26,58 +27,62 @@ export default function HomePage() {
 
   return (
     <>
-      <section className="mx-auto grid max-w-content gap-12 px-5 py-20 sm:py-28 lg:grid-cols-[1fr_360px] lg:items-center">
+      <section className="mx-auto grid max-w-content gap-12 px-5 py-20 sm:py-28 lg:grid-cols-[1fr_400px] lg:items-center">
         <div>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-ink-500 dark:text-ink-400">Enterprise AI · Analytics Transformation · Governance</p>
-          <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-ink-950 dark:text-white sm:text-6xl lg:text-7xl">
-            Chethan builds governance-first AI and analytics systems for enterprise execution.
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue dark:text-brand-sand">Technology · Leadership · AI · Analytics · Systems</p>
+          <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-brand-navy dark:text-white sm:text-6xl lg:text-7xl">
+            I build practical technology systems and write about the thinking behind them.
           </h1>
-          <p className="mt-7 max-w-2xl text-xl leading-9 text-ink-600 dark:text-ink-300">
-            Enterprise AI systems architect focused on agentic workflows, knowledge platforms, intelligent orchestration, and analytics modernization.
+          <p className="mt-7 max-w-2xl text-xl leading-9 text-ink-700 dark:text-ink-300">
+            I work at the intersection of enterprise AI, analytics transformation, workflow architecture, and responsible systems. This is where I share my work, my writing, and the ideas that shape how I build.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link className="rounded-full bg-ink-950 px-5 py-3 text-sm font-semibold text-white dark:bg-white dark:text-ink-950" href="/projects">Explore Projects</Link>
-            <Link className="rounded-full border border-ink-300 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:text-ink-100" href="/insights">Read Insights</Link>
-            <Link className="rounded-full border border-ink-300 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:text-ink-100" href={siteConfig.links.resume}>View Resume</Link>
-            <Link className="rounded-full border border-ink-300 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:text-ink-100" href={siteConfig.links.linkedin}>LinkedIn</Link>
-            <Link className="rounded-full border border-ink-300 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:text-ink-100" href={siteConfig.links.github}>GitHub</Link>
+            <Link className="rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-blue dark:bg-brand-sand dark:text-ink-950" href="/projects">Explore Work</Link>
+            <Link className="rounded-full border border-brand-copper/50 bg-white/60 px-5 py-3 text-sm font-semibold text-brand-navy transition hover:border-brand-copper dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href="/insights">Read Writing</Link>
+            <Link className="rounded-full border border-ink-300 bg-white/60 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href={siteConfig.links.resume}>View Resume</Link>
+            <Link className="rounded-full border border-ink-300 bg-white/60 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href={siteConfig.links.linkedin}>LinkedIn</Link>
+            <Link className="rounded-full border border-ink-300 bg-white/60 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href={siteConfig.links.github}>GitHub</Link>
           </div>
         </div>
-        <div className="rounded-3xl border border-ink-200 bg-ink-50 p-7 dark:border-ink-800 dark:bg-ink-900/50">
-          <div className="mb-6 h-28 w-28 rounded-2xl border border-ink-300 bg-white p-4 dark:border-ink-700 dark:bg-ink-950">
-            <div className="grid h-full grid-cols-3 gap-1">
-              {Array.from({ length: 9 }).map((_, index) => <span key={index} className="rounded bg-ink-900 dark:bg-ink-100" />)}
-            </div>
+        <aside className="overflow-hidden rounded-[2rem] border border-brand-copper/25 bg-white/75 shadow-xl shadow-brand-navy/10 backdrop-blur dark:border-ink-800 dark:bg-ink-900/50">
+          <div className="relative aspect-[4/5]">
+            <Image
+              src="/images/chethan-portrait.jpg"
+              alt="Chethan P"
+              fill
+              priority
+              sizes="(min-width: 1024px) 400px, 100vw"
+              className="object-cover object-center"
+            />
           </div>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-ink-500">Current role</p>
-          <p className="mt-2 text-2xl font-semibold text-ink-950 dark:text-white">Enterprise AI & Analytics Transformation Leader</p>
-          <div className="mt-6 grid gap-3 text-sm text-ink-600 dark:text-ink-300">
-            <p>Architecting systems that connect models, context, workflows, controls, and business outcomes.</p>
-            <p>Publishing architecture memos and implementation patterns for serious AI adoption.</p>
+          <div className="border-t border-brand-copper/20 bg-brand-sand/70 p-6 dark:border-ink-800 dark:bg-ink-900/80">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-blue dark:text-brand-sand">Chethan P</p>
+            <p className="mt-2 text-2xl font-semibold text-brand-navy dark:text-white">Technology leader, AI practitioner, systems thinker</p>
+            <p className="mt-4 text-sm leading-6 text-ink-700 dark:text-ink-300">I care about useful systems, clear execution, responsible AI, and work that remains grounded beyond the screen.</p>
           </div>
-        </div>
+        </aside>
       </section>
 
-      <Section eyebrow="Current Focus" title="Building enterprise intelligence systems with durable foundations.">
+      <Section eyebrow="Current Focus" title="What I am focused on now" description="My work spans professional systems, practical AI adoption, knowledge workflows, writing, and learning that stays connected to the real world.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {focusAreas.map((area) => <div key={area} className="rounded-2xl border border-ink-200 p-5 text-lg font-medium dark:border-ink-800">{area}</div>)}
+          {focusAreas.map((area) => <div key={area} className="rounded-2xl border border-brand-copper/20 bg-white/60 p-5 text-lg font-medium text-brand-navy dark:border-ink-800 dark:bg-ink-900/40 dark:text-white">{area}</div>)}
         </div>
       </Section>
 
-      <Section eyebrow="Evidence" title="Featured projects" description="Systems, products, and frameworks that demonstrate architecture thinking and execution discipline.">
+      <Section eyebrow="Selected Work" title="Projects and systems" description="A portfolio of serious work: AI platforms, analytics products, knowledge systems, workflow patterns, and practical experiments.">
         <div className="grid gap-5 md:grid-cols-3">{projects.map((item) => <ContentCard key={item.slug} item={item} href={`/projects/${item.slug}`} />)}</div>
       </Section>
 
-      <Section eyebrow="Writing" title="Latest insights" description="Architecture memos and implementation notes on enterprise AI, governance, context, and analytics transformation.">
+      <Section eyebrow="Writing" title="Latest notes and insights" description="Professional writing on technology, leadership, enterprise AI, analytics, governance, systems thinking, and practical execution.">
         <div className="grid gap-5 md:grid-cols-3">{insights.map((item) => <ContentCard key={item.slug} item={item} href={`/insights/${item.slug}`} />)}</div>
       </Section>
 
-      <Section eyebrow="Principles" title="How I think about intelligent systems.">
+      <Section eyebrow="Principles" title="What guides the work">
         <div className="grid gap-5 md:grid-cols-2">
           {principles.map(([title, body]) => (
-            <div key={title} className="rounded-2xl border border-ink-200 p-6 dark:border-ink-800">
-              <h3 className="text-xl font-semibold text-ink-950 dark:text-white">{title}</h3>
-              <p className="mt-3 leading-7 text-ink-600 dark:text-ink-300">{body}</p>
+            <div key={title} className="rounded-2xl border border-brand-copper/20 bg-white/60 p-6 dark:border-ink-800 dark:bg-ink-900/40">
+              <h3 className="text-xl font-semibold text-brand-navy dark:text-white">{title}</h3>
+              <p className="mt-3 leading-7 text-ink-700 dark:text-ink-300">{body}</p>
             </div>
           ))}
         </div>

@@ -26,6 +26,14 @@ const config: Config = {
           800: '#1e293b',
           900: '#0f172a',
           950: '#020617'
+        },
+        brand: {
+          navy: '#123047',
+          blue: '#1f5f8b',
+          sage: '#6f8376',
+          sand: '#f4efe7',
+          copper: '#b7794a',
+          ivory: '#fffdf8'
         }
       },
       maxWidth: {

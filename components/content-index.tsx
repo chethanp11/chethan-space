@@ -20,17 +20,17 @@ export function ContentIndex({ items, basePath }: { items: ContentItem[]; basePa
 
   return (
     <div>
-      <div className="mb-8 grid gap-4 rounded-2xl border border-ink-200 bg-ink-50 p-4 dark:border-ink-800 dark:bg-ink-900/40 md:grid-cols-[1fr_auto]">
+      <div className="mb-8 grid gap-4 rounded-2xl border border-brand-copper/20 bg-brand-sand/45 p-4 dark:border-ink-800 dark:bg-ink-900/40 md:grid-cols-[1fr_auto]">
         <input
           value={query}
           onChange={(event) => setQuery(event.target.value)}
           placeholder="Search by topic, tag, or architecture pattern..."
-          className="rounded-xl border border-ink-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-ink-500 dark:border-ink-800 dark:bg-ink-950 dark:text-white"
+          className="rounded-xl border border-brand-copper/25 bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-brand-blue dark:border-ink-800 dark:bg-ink-950 dark:text-white"
         />
         <select
           value={category}
           onChange={(event) => setCategory(event.target.value)}
-          className="rounded-xl border border-ink-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-ink-500 dark:border-ink-800 dark:bg-ink-950 dark:text-white"
+          className="rounded-xl border border-brand-copper/25 bg-white/80 px-4 py-3 text-sm outline-none transition focus:border-brand-blue dark:border-ink-800 dark:bg-ink-950 dark:text-white"
         >
           {categories.map((entry) => <option key={entry}>{entry}</option>)}
         </select>

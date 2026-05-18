@@ -1,14 +1,14 @@
 export const siteConfig = {
   name: 'Chethan Space',
-  author: 'Chethan',
-  title: 'Enterprise AI & Analytics Transformation',
+  author: 'Chethan P',
+  title: 'Technology Leadership, AI, Analytics & Systems Thinking',
   description:
-    'Enterprise AI systems, analytics transformation, governance-first architectures, and intelligent workflow orchestration.',
+    'Chethan P writes and builds at the intersection of technology leadership, enterprise AI, analytics transformation, responsible systems, natural farming, and learning.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://chethan.space',
   links: {
-    linkedin: 'https://www.linkedin.com/in/chethan',
-    github: 'https://github.com/chethan',
-    email: 'mailto:hello@chethan.space',
+    linkedin: 'https://www.linkedin.com/in/chethanp11',
+    github: 'https://github.com/chethanp11',
+    email: 'mailto:chethanp11@gmail.com',
     resume: '/resume/chethan-resume.pdf'
   }
 };
@@ -16,8 +16,8 @@ export const siteConfig = {
 export const navItems = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/insights', label: 'Insights' },
+  { href: '/projects', label: 'Work' },
+  { href: '/insights', label: 'Writing' },
   { href: '/frameworks', label: 'Frameworks' },
   { href: '/lab', label: 'Lab' },
   { href: '/contact', label: 'Contact' }
