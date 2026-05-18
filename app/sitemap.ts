@@ -3,7 +3,7 @@ import { getCollection } from '@/lib/content';
 import { siteConfig } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/about', '/projects', '/insights', '/frameworks', '/lab', '/contact'].map((route) => ({ url: `${siteConfig.url}${route}`, lastModified: new Date() }));
+  const staticRoutes = ['', '/about', '/journey', '/projects', '/insights', '/frameworks', '/lab', '/beyond-work', '/contact'].map((route) => ({ url: `${siteConfig.url}${route}`, lastModified: new Date() }));
   const contentRoutes = [
     ...getCollection('projects').map((item) => `/projects/${item.slug}`),
     ...getCollection('insights').map((item) => `/insights/${item.slug}`)

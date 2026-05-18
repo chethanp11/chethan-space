@@ -72,9 +72,7 @@ coverImage: /images/example.png
 
 ## Site configuration
 
-Edit `lib/site.ts` for name, canonical URL, social links, email, and resume path.
-
-Place a PDF resume at `public/resume/chethan-resume.pdf` or update the configured path.
+Edit `lib/site.ts` for name, canonical URL, social links, and email.
 
 ## Deployment
 

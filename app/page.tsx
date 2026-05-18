@@ -29,17 +29,17 @@ export default function HomePage() {
     <>
       <section className="mx-auto grid max-w-content gap-12 px-5 py-20 sm:py-28 lg:grid-cols-[1fr_400px] lg:items-center">
         <div>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue dark:text-brand-sand">Technology · Leadership · AI · Analytics · Systems</p>
-          <h1 className="max-w-4xl text-5xl font-semibold tracking-[-0.04em] text-brand-navy dark:text-white sm:text-6xl lg:text-7xl">
-            I build practical technology systems and write about the thinking behind them.
+          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-brand-blue dark:text-brand-sand">AI Leadership · Analytics · Governance · Systems</p>
+          <h1 className="max-w-4xl text-4xl font-semibold tracking-[-0.035em] text-brand-navy dark:text-white sm:text-5xl lg:text-6xl">
+            I help shape practical AI, analytics, and technology systems for serious enterprise work.
           </h1>
           <p className="mt-7 max-w-2xl text-xl leading-9 text-ink-700 dark:text-ink-300">
-            I work at the intersection of enterprise AI, analytics transformation, workflow architecture, and responsible systems. This is where I share my work, my writing, and the ideas that shape how I build.
+            My work sits at the intersection of AI leadership, analytics transformation, governance, workflow architecture, and enterprise execution. I use this space to share the systems I build, the lessons I learn, and the thinking behind my professional journey.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link className="rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-blue dark:bg-brand-sand dark:text-ink-950" href="/projects">Explore Work</Link>
             <Link className="rounded-full border border-brand-copper/50 bg-white/60 px-5 py-3 text-sm font-semibold text-brand-navy transition hover:border-brand-copper dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href="/insights">Read Writing</Link>
-            <Link className="rounded-full border border-ink-300 bg-white/60 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href={siteConfig.links.resume}>View Resume</Link>
+            <Link className="rounded-full border border-ink-300 bg-white/60 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href="/journey">Professional Journey</Link>
             <Link className="rounded-full border border-ink-300 bg-white/60 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href={siteConfig.links.linkedin}>LinkedIn</Link>
             <Link className="rounded-full border border-ink-300 bg-white/60 px-5 py-3 text-sm font-semibold text-ink-800 dark:border-ink-700 dark:bg-ink-900/50 dark:text-ink-100" href={siteConfig.links.github}>GitHub</Link>
           </div>
@@ -58,12 +58,12 @@ export default function HomePage() {
           <div className="border-t border-brand-copper/20 bg-brand-sand/70 p-6 dark:border-ink-800 dark:bg-ink-900/80">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-blue dark:text-brand-sand">Chethan P</p>
             <p className="mt-2 text-2xl font-semibold text-brand-navy dark:text-white">Technology leader, AI practitioner, systems thinker</p>
-            <p className="mt-4 text-sm leading-6 text-ink-700 dark:text-ink-300">I care about useful systems, clear execution, responsible AI, and work that remains grounded beyond the screen.</p>
+            <p className="mt-4 text-sm leading-6 text-ink-700 dark:text-ink-300">I care about AI that is useful, analytics that drives judgment, and systems that remain accountable in real operating environments.</p>
           </div>
         </aside>
       </section>
 
-      <Section eyebrow="Current Focus" title="What I am focused on now" description="My work spans professional systems, practical AI adoption, knowledge workflows, writing, and learning that stays connected to the real world.">
+      <Section eyebrow="Current Focus" title="Where my work is focused" description="The work is broader than AI alone, but AI leadership is an important thread: how intelligent systems, analytics, governance, people, and execution come together responsibly.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {focusAreas.map((area) => <div key={area} className="rounded-2xl border border-brand-copper/20 bg-white/60 p-5 text-lg font-medium text-brand-navy dark:border-ink-800 dark:bg-ink-900/40 dark:text-white">{area}</div>)}
         </div>

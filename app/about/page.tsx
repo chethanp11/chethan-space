@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import { HomeBack } from '@/components/home-back';
 import { Section } from '@/components/section';
-import { siteConfig } from '@/lib/site';
 
 export const metadata: Metadata = { title: 'About', description: 'Professional narrative, personal values, expertise, leadership areas, and current mission.' };
 
@@ -37,7 +37,8 @@ const stack = {
 export default function AboutPage() {
   return (
     <>
-      <section className="mx-auto grid max-w-content gap-10 px-5 py-16 sm:py-20 lg:grid-cols-[1fr_360px] lg:items-start">
+      <HomeBack />
+      <section className="mx-auto grid max-w-content gap-10 px-5 py-14 sm:py-16 lg:grid-cols-[1fr_360px] lg:items-start">
         <div>
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand-blue dark:text-brand-sand">About</p>
           <h1 className="text-4xl font-semibold tracking-tight text-brand-navy dark:text-white sm:text-5xl">I build systems, write to clarify thinking, and stay grounded in practical outcomes.</h1>
@@ -98,7 +99,7 @@ export default function AboutPage() {
       <Section eyebrow="Mission" title="What I am building toward">
         <div className="rounded-3xl border border-brand-copper/25 bg-brand-sand/70 p-8 dark:border-ink-800 dark:bg-ink-900/40">
           <p className="max-w-3xl text-xl leading-9 text-ink-800 dark:text-ink-200">I want to build a credible, useful, and evolving body of work around technology leadership, practical AI, analytics transformation, responsible systems, and personal learning.</p>
-          <Link href={siteConfig.links.resume} className="mt-6 inline-flex rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-blue dark:bg-brand-sand dark:text-ink-950">Download Resume</Link>
+          <Link href="/journey" className="mt-6 inline-flex rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-blue dark:bg-brand-sand dark:text-ink-950">View Professional Journey</Link>
         </div>
       </Section>
     </>
