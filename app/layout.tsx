@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   alternates: { canonical: '/' },
+  icons: { icon: '/icon.svg', shortcut: '/icon.svg', apple: '/icon.svg' },
   openGraph: {
     type: 'website',
     url: siteConfig.url,

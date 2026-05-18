@@ -13,31 +13,34 @@ const journey = [
     period: '2024 to Now AI Community Contributions',
     years: '2024–Now',
     organization: 'AI Community Contributions',
-    role: 'Independent AI systems, frameworks, experimentation, and community contribution',
+    role: 'Independent AI Systems, Frameworks, Experimentation, and Community Contribution',
     context: 'Developing practical AI systems, reusable frameworks, experiments, and public thinking that help others understand how AI, analytics, knowledge, and human review can work together responsibly.',
     details: [
-      'Building independent systems and frameworks around practical AI adoption, knowledge workflows, governance, and analytics transformation.',
+      'Building independent systems and frameworks around practical AI adoption, knowledge workflows, governance, context engineering, and analytics transformation.',
       'Publishing applied thoughts and prototypes that translate enterprise analytics, AML, remediation, and AI transformation experience into reusable learning.',
-      'Contributing to AI community learning through hands-on examples, responsible tool-use patterns, and systems thinking.'
+      'Exploring human-in-the-loop review, source-grounded knowledge systems, and responsible AI workflows through hands-on builds.',
+      'Creating practical article banners, frameworks, and explainers that make complex AI operating-model ideas easier to share and discuss.',
+      'Contributing to AI community learning through examples, responsible tool-use patterns, and systems thinking.'
     ]
   },
   {
     period: '2025 to Now',
     years: '2025–Now',
     organization: 'Citi AI Transformation workgroup',
-    role: 'AI transformation contributor',
+    role: 'AI Transformation Contributor',
     context: 'Contributing to enterprise AI transformation with focus on practical use cases, responsible adoption, workflow design, and governance-aware operating models.',
     details: [
       'Contributing to AI transformation from the lens of analytics leadership, governance, workflow design, and enterprise adoption.',
       'Helping identify practical AI use cases that improve work while preserving accountability, traceability, and review discipline.',
-      'Connecting AI adoption with data quality, stakeholder engagement, change management, and scalable operating practices.'
+      'Connecting AI adoption with data quality, stakeholder engagement, change management, and scalable operating practices.',
+      'Focusing on the operating model needed to move AI from experimentation into responsible enterprise execution.'
     ]
   },
   {
     period: '2024 to Now',
     years: '2024–Now',
     organization: 'Citi Business Analysis',
-    role: 'Remediation Business Analytics leader',
+    role: 'Remediation Business Analytics Leader',
     context: 'Leading business analytics for remediation by connecting analytics execution, operating cadence, data interpretation, governance needs, and business decisions.',
     details: [
       'Translate complex remediation data into business-facing insights, decisions, performance measures, and action-oriented narratives.',
@@ -49,12 +52,11 @@ const journey = [
     period: '2021 to 2024',
     years: '2021–2024',
     organization: 'CITI Remediation data Analytics',
-    role: 'Remediation Data Analytics leader',
+    role: 'Remediation Data Analytics Leader',
     context: 'Led remediation data analytics with focus on data quality, governance, measurement discipline, stakeholder trust, and scalable analytics execution.',
     details: [
       'Built trusted analytics approaches where business decisions depended on data quality, consistency, lineage, and clear interpretation.',
-      'Applied data quality and governance discipline to remediation execution, measurement, and stakeholder reporting.',
-      'Drove analytics transformation through structured delivery, operating cadence, stakeholder engagement, implementation, and stabilization.'
+      'Drove remediation analytics through structured delivery, operating cadence, stakeholder engagement, implementation, and stabilization.'
     ]
   },
   {
@@ -65,8 +67,7 @@ const journey = [
     context: 'Served as APAC Regional Lead managing Independent Validation for AML scenarios, KYC risk scoring tools, and predictive models across multiple locations.',
     details: [
       'Managed an Independent Validation team of 15 FTE statisticians across Bangalore, Pune, and Kuala Lumpur.',
-      'Validated AML scenarios, KYC risk scoring tools, and predictive models with focus on explainability, traceability, and governance.',
-      'Worked across Anti-Money Laundering, Model Validation, Transaction Monitoring, KYC, Watch-list, Sanctions, Risk Rating Methodology, and Compliance Testing.'
+      'Validated AML scenarios, KYC risk scoring tools, and predictive models with focus on explainability, traceability, and governance.'
     ]
   },
   {
@@ -77,7 +78,6 @@ const journey = [
     context: 'Led Financial Crimes and Operational Analytics delivery for Bank of America, transforming manual risk monitoring into an analytics-driven, technology-managed AML application program.',
     details: [
       'Set up a diverse 35 FTE team of risk managers, analysts, developers, and validators to transform manual Risk Monitoring through threshold analysis, validation, and implementation.',
-      'Managed transformation within an $8 million budget and built a multi-location delivery model for Financial Crimes and Operational Analytics.',
       'Headed end-to-end execution for 3 major AML MRA projects covering OCC 11-12, 12 CFR Part 30, and 12 CFR 21.11, avoiding penalty exposure of approximately $300 million.'
     ]
   },
@@ -85,18 +85,34 @@ const journey = [
     period: 'Early career',
     years: 'Foundation',
     organization: 'HSBC and Target',
-    role: 'Analytics and business technology foundation',
+    role: 'Analytics and Business Technology Foundation',
     context: 'Built the foundation in analytics, business problem solving, customer intelligence, delivery discipline, and stakeholder-centered execution.',
     details: [
       'Drove HSBC strategic initiatives across Wealth Management, Customer Acquisition, and Cross/Up Selling wealth products to 2.4 million HNI customers.',
-      'Contributed to initiatives that drove $360 million in incremental sales through customer analytics and wealth management focus.',
-      'Built experience across customer acquisition, product propensity modelling, sales forecasting, wealth dashboards, market segmentation, clustering, and visual KPI dashboards.'
+      'Built experience across customer acquisition, product propensity modelling, sales forecasting, segmentation, clustering, and visual KPI dashboards.'
     ]
   }
 ];
 
 function anchorFor(value: string) {
   return value.toLowerCase().replaceAll(' ', '-').replaceAll('—', '').replaceAll('–', '-');
+}
+
+function articleClassFor(organization: string) {
+  const base = 'relative scroll-mt-28 rounded-3xl border p-7 pl-14 shadow-sm shadow-ink-900/5 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-navy/10 dark:border-ink-800 dark:bg-ink-900/45 sm:pl-16';
+  if (organization === 'AI Community Contributions') {
+    return `${base} border-brand-blue/45 bg-gradient-to-br from-brand-sky/95 via-white/90 to-brand-blue/10 hover:border-brand-blue/70`;
+  }
+  if (organization === 'Citi AI Transformation workgroup') {
+    return `${base} border-brand-copper/45 bg-gradient-to-br from-brand-sand/90 via-white/90 to-brand-copper/10 hover:border-brand-copper/70`;
+  }
+  return `${base} border-brand-copper/25 bg-white/80 hover:border-brand-copper/55`;
+}
+
+function markerClassFor(organization: string) {
+  if (organization === 'AI Community Contributions') return 'border-brand-blue/40 bg-brand-blue text-white';
+  if (organization === 'Citi AI Transformation workgroup') return 'border-brand-copper/45 bg-brand-copper text-white';
+  return 'border-brand-copper/35 bg-brand-sand text-brand-navy dark:border-ink-700 dark:bg-ink-950 dark:text-brand-sand';
 }
 
 
@@ -160,7 +176,7 @@ export default function JourneyPage() {
       <PageBanner
         tone="journey"
         eyebrow="Professional Journey"
-        title="A career shaped by analytics, remediation leadership, governance, and practical AI transformation"
+        title="Focus on AI Leadership"
         description="The timeline starts with current AI community contributions and connects them with enterprise roles across analytics, AML, remediation, governance, and transformation."
       />
       <section className="mx-auto max-w-content px-5 py-14 sm:py-16">
@@ -190,8 +206,8 @@ export default function JourneyPage() {
 
           <div className="relative space-y-6 before:absolute before:bottom-8 before:left-4 before:top-8 before:w-px before:bg-brand-copper/35 dark:before:bg-ink-700 sm:before:left-5">
             {journey.map((item, index) => (
-              <article key={`${item.years}-${item.role}`} id={anchorFor(item.period)} className="relative scroll-mt-28 rounded-3xl border border-brand-copper/25 bg-white/80 p-7 pl-14 shadow-sm shadow-ink-900/5 transition duration-300 hover:-translate-y-1 hover:border-brand-copper/55 hover:shadow-xl hover:shadow-brand-navy/10 dark:border-ink-800 dark:bg-ink-900/45 sm:pl-16">
-                <span className="absolute left-[3px] top-8 grid h-8 w-8 place-items-center rounded-full border border-brand-copper/35 bg-brand-sand text-sm font-bold text-brand-navy shadow-sm dark:border-ink-700 dark:bg-ink-950 dark:text-brand-sand sm:left-1">{index + 1}</span>
+              <article key={`${item.years}-${item.role}`} id={anchorFor(item.period)} className={articleClassFor(item.organization)}>
+                <span className={`absolute left-[3px] top-8 grid h-8 w-8 place-items-center rounded-full border text-sm font-bold shadow-sm sm:left-1 ${markerClassFor(item.organization)}`}>{index + 1}</span>
                 <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue dark:text-brand-sand">
                   <span>{item.years}</span>
                   <span>·</span>
