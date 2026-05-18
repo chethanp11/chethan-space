@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import rehypePrettyCode from 'rehype-pretty-code';
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const item = getItem('insights', slug);
   if (!item) return {};
-  const images = item.coverImage ? [{ url: item.coverImage, width: 1200, height: 630, alt: item.title }] : undefined;
+  const images = item.coverImage ? [{ url: item.coverImage, width: 1200, height: 300, alt: item.title }] : undefined;
   return {
     title: item.title,
     description: item.summary,
@@ -34,6 +35,11 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
   return (
     <>
       <HomeBack href="/insights" label="Back to Thoughts" />
+      {item.coverImage ? (
+        <div className="mx-auto max-w-content px-5 pt-6">
+          <Image src={item.coverImage} alt={item.title} width={1200} height={300} className="h-auto w-full rounded-[2rem] object-cover shadow-lg shadow-brand-navy/10" priority />
+        </div>
+      ) : null}
       <PageBanner tone="writing" eyebrow={item.category} title={item.title} description={item.summary}>
         <div className="space-y-4">
           <TagList tags={item.tags} />
@@ -41,7 +47,6 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
         </div>
       </PageBanner>
       <article className="mx-auto max-w-content px-5 py-14">
-        {item.coverImage ? <img src={item.coverImage} alt="" className="mb-10 aspect-[1200/630] w-full rounded-[2rem] object-cover shadow-lg shadow-brand-navy/10" /> : null}
         <div className="prose prose-ink max-w-prose dark:prose-invert prose-headings:tracking-tight prose-a:text-ink-950 dark:prose-a:text-white">
           <MDXRemote source={item.body} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [[rehypePrettyCode, { theme: 'github-dark' }]] } }} />
         </div>
