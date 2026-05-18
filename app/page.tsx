@@ -56,22 +56,22 @@ export default function HomePage() {
             <div className="space-y-4 py-8">
               <h2 className="text-2xl font-semibold tracking-[-0.035em] text-brand-navy">Vision</h2>
               <p className="text-lg leading-8 text-ink-700">
-                I help shape practical AI, analytics, and technology systems for serious enterprise work. My work sits at the intersection of AI leadership, analytics transformation, governance, workflow architecture, and enterprise execution.
+                Build practical, responsible AI and analytics systems that help enterprises make better decisions, strengthen trust, and turn complex work into clear, executable outcomes.
               </p>
             </div>
             <div className="space-y-4 py-8">
               <h2 className="text-2xl font-semibold tracking-[-0.035em] text-brand-navy">Mission</h2>
               <p className="text-lg leading-8 text-ink-700">
-                I use this space to share the systems I build, the lessons I learn, and the thinking behind my professional journey. Through thoughts, frameworks, and projects, I aim to help others understand how intelligent systems, analytics, governance, people, and execution come together responsibly.
+                Use my experience across delivery, AML, remediation, analytics, and AI transformation to create reusable frameworks, share practical lessons, and help teams adopt intelligent systems with discipline, governance, and human accountability.
               </p>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link className="inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/20 transition hover:-translate-y-0.5 hover:bg-brand-blue" href="/projects">Explore Work <Icon name="arrow" className="h-4 w-4" /></Link>
-            <Link className="rounded-full border border-brand-copper/50 bg-white/70 px-5 py-3 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:border-brand-copper" href="/insights">Read Thoughts</Link>
-            <Link className="rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href="/journey">Professional Journey</Link>
-            <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href={siteConfig.links.linkedin} target="_blank" rel="noopener noreferrer"><Icon name="linkedin" className="h-4 w-4" /> LinkedIn</Link>
-            <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5" href={siteConfig.links.github} target="_blank" rel="noopener noreferrer"><Icon name="github" className="h-4 w-4" /> GitHub</Link>
+            <Link className="inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-navy/20 transition hover:-translate-y-0.5 hover:bg-brand-sky hover:text-brand-navy" href="/projects">Explore Work <Icon name="arrow" className="h-4 w-4" /></Link>
+            <Link className="rounded-full border border-brand-copper/50 bg-white/70 px-5 py-3 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:border-brand-blue/40 hover:bg-brand-sky" href="/insights">Read Thoughts</Link>
+            <Link className="rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:bg-brand-sky hover:text-brand-navy" href="/journey">Professional Journey</Link>
+            <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:bg-brand-sky hover:text-brand-navy" href={siteConfig.links.linkedin} target="_blank" rel="noopener noreferrer"><Icon name="linkedin" className="h-4 w-4" /> LinkedIn</Link>
+            <Link className="inline-flex items-center gap-2 rounded-full border border-ink-300 bg-white/70 px-5 py-3 text-sm font-semibold text-ink-800 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:bg-brand-sky hover:text-brand-navy" href={siteConfig.links.github} target="_blank" rel="noopener noreferrer"><Icon name="github" className="h-4 w-4" /> GitHub</Link>
           </div>
         </div>
       </section>
@@ -79,7 +79,7 @@ export default function HomePage() {
       <Section eyebrow="Current Focus" title="Where my work is focused" description="The work is broader than AI alone, but AI leadership is an important thread: how intelligent systems, analytics, governance, people, and execution come together responsibly.">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {focusAreas.map((area) => (
-            <div key={area.title} className="rounded-3xl border border-brand-copper/20 bg-white/70 p-5 text-lg font-medium text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-1 hover:border-brand-copper/50 hover:shadow-lg hover:shadow-brand-navy/10">
+            <div key={area.title} className="rounded-3xl border border-brand-copper/20 bg-white/70 p-5 text-lg font-medium text-brand-navy shadow-sm shadow-ink-900/5 transition hover:-translate-y-1 hover:border-brand-blue/40 hover:bg-brand-sky/70 hover:shadow-lg hover:shadow-brand-navy/10">
               <span className="mb-4 grid h-11 w-11 place-items-center rounded-2xl bg-brand-sand text-brand-navy"><Icon name={area.icon} /></span>
               {area.title}
             </div>

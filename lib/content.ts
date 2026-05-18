@@ -64,7 +64,7 @@ export function getCollection(kind: ContentKind): ContentItem[] {
         status: typeof data.status === 'string' ? data.status : undefined,
         featured: Boolean(data.featured),
         coverImage: typeof data.coverImage === 'string' ? data.coverImage : undefined,
-        readingTime: readingTime(content).text,
+        readingTime: typeof data.readingTime === 'string' ? data.readingTime : readingTime(content).text,
         body: content
       } satisfies ContentItem;
     })

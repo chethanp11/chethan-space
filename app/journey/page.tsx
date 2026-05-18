@@ -10,27 +10,51 @@ export const metadata: Metadata = {
 
 const journey = [
   {
-    period: 'Early career',
-    years: 'Foundation',
-    organization: 'HSBC and Target',
-    role: 'Analytics and business technology foundation',
-    context: 'Built the early foundation in analytics, business problem solving, delivery discipline, and stakeholder-centered execution.',
+    period: '2025 to Now',
+    years: '2025–Now',
+    organization: 'Citi AI Transformation workgroup',
+    role: 'AI transformation contributor',
+    context: 'Contributing to AI transformation work, practical use cases, responsible adoption, and the enterprise operating model needed for AI-enabled execution.',
     details: [
-      'Developed a practical understanding of how analytics work must connect to real business decisions.',
-      'Built habits around execution quality, communication, measurement, and operational usefulness.',
-      'Established the base for later leadership across financial services, risk, analytics, and transformation.'
+      'Contributing to AI transformation from the lens of analytics, governance, workflows, and real enterprise adoption.',
+      'Focusing on practical AI use cases that improve work without weakening accountability.',
+      'Exploring how AI can become a responsible capability layer across business and analytics workflows.'
     ]
   },
   {
-    period: '2012 to 2018',
-    years: '2012–2018',
-    organization: 'Bank of America',
-    role: 'Analytics delivery and transformation',
-    context: 'Worked on large-scale analytics and operational transformation in a highly governed enterprise environment.',
+    period: '2024 to Now',
+    years: '2024–Now',
+    organization: 'Citi Business Analysis',
+    role: 'Remediation Business Analytics leader',
+    context: 'Leading business analytics for remediation, connecting analytics execution with business outcomes, governance needs, and operating decisions.',
     details: [
-      'Strengthened experience in analytics delivery, controls, operational rigor, and business impact.',
-      'Contributed to repeatable execution models across complex stakeholder and data environments.',
-      'Deepened financial-services domain experience across analytics, risk, and transformation work.'
+      'Bridging analytical depth with business-facing interpretation and action.',
+      'Helping teams reason through performance, quality, remediation progress, and decision tradeoffs.',
+      'Continuing to strengthen the operating model around analytics, trust, and execution.'
+    ]
+  },
+  {
+    period: '2024 to Now Independent',
+    years: '2024–Now',
+    organization: 'Independent work',
+    role: 'Systems, frameworks, experimentation, and AI community contribution',
+    context: 'Developing independent systems, frameworks, experiments, and public thinking that contribute to practical AI learning and community knowledge.',
+    details: [
+      'Building systems and frameworks to clarify how AI, analytics, knowledge, and human review can work together.',
+      'Experimenting with practical implementations and documenting lessons for reuse.',
+      'Contributing to AI community learning through thoughts, prototypes, and applied systems thinking.'
+    ]
+  },
+  {
+    period: '2021 to 2024',
+    years: '2021–2024',
+    organization: 'CITI Remediation data Analytics',
+    role: 'Remediation Data Analytics leader',
+    context: 'Led remediation data analytics work with focus on data quality, governance, measurement, stakeholder trust, and scalable execution.',
+    details: [
+      'Led analytics work where business decisions depended on data quality, consistency, and clear interpretation.',
+      'Focused on remediation execution, operating cadence, stakeholder alignment, and governance needs.',
+      'Built reusable ways to turn complex data into trusted business understanding.'
     ]
   },
   {
@@ -46,51 +70,27 @@ const journey = [
     ]
   },
   {
-    period: '2021 to 2024',
-    years: '2021–2024',
-    organization: 'Citi',
-    role: 'Remediation Data Analytics leader',
-    context: 'Led remediation data analytics work with focus on data quality, governance, measurement, stakeholder trust, and scalable execution.',
+    period: '2012 to 2018',
+    years: '2012–2018',
+    organization: 'TCS - Bank of America',
+    role: 'Leading delivery for AML application and Transformation to address consent order',
+    context: 'Led delivery for AML application work and transformation initiatives focused on addressing consent-order requirements in a highly governed enterprise environment.',
     details: [
-      'Led analytics work where business decisions depended on data quality, consistency, and clear interpretation.',
-      'Focused on remediation execution, operating cadence, stakeholder alignment, and governance needs.',
-      'Built reusable ways to turn complex data into trusted business understanding.'
+      'Led delivery execution across AML application priorities, stakeholder coordination, and controlled implementation needs.',
+      'Supported transformation work tied to consent-order remediation, operating discipline, and measurable delivery outcomes.',
+      'Deepened financial-services domain experience across AML, risk, controls, and enterprise transformation.'
     ]
   },
   {
-    period: '2024 to Now',
-    years: '2024–Now',
-    organization: 'Citi',
-    role: 'Remediation Business Analytics leader',
-    context: 'Leading business analytics for remediation, connecting analytics execution with business outcomes, governance needs, and operating decisions.',
+    period: 'Early career',
+    years: 'Foundation',
+    organization: 'HSBC and Target',
+    role: 'Analytics and business technology foundation',
+    context: 'Built the early foundation in analytics, business problem solving, delivery discipline, and stakeholder-centered execution.',
     details: [
-      'Bridging analytical depth with business-facing interpretation and action.',
-      'Helping teams reason through performance, quality, remediation progress, and decision tradeoffs.',
-      'Continuing to strengthen the operating model around analytics, trust, and execution.'
-    ]
-  },
-  {
-    period: '2025 to Now',
-    years: '2025–Now',
-    organization: 'Citi AI Transformation workgroup',
-    role: 'AI transformation contributor',
-    context: 'Contributing to AI transformation work, practical use cases, responsible adoption, and the enterprise operating model needed for AI-enabled execution.',
-    details: [
-      'Contributing to AI transformation from the lens of analytics, governance, workflows, and real enterprise adoption.',
-      'Focusing on practical AI use cases that improve work without weakening accountability.',
-      'Exploring how AI can become a responsible capability layer across business and analytics workflows.'
-    ]
-  },
-  {
-    period: '2024 to Now',
-    years: '2024–Now',
-    organization: 'Independent work',
-    role: 'Systems, frameworks, experimentation, and AI community contribution',
-    context: 'Developing independent systems, frameworks, experiments, and public thinking that contribute to practical AI learning and community knowledge.',
-    details: [
-      'Building systems and frameworks to clarify how AI, analytics, knowledge, and human review can work together.',
-      'Experimenting with practical implementations and documenting lessons for reuse.',
-      'Contributing to AI community learning through thoughts, prototypes, and applied systems thinking.'
+      'Developed a practical understanding of how analytics work must connect to real business decisions.',
+      'Built habits around execution quality, communication, measurement, and operational usefulness.',
+      'Established the base for later leadership across financial services, risk, analytics, and transformation.'
     ]
   }
 ];
@@ -98,6 +98,64 @@ const journey = [
 function anchorFor(value: string) {
   return value.toLowerCase().replaceAll(' ', '-').replaceAll('—', '').replaceAll('–', '-');
 }
+
+
+const keyHighlights = [
+  { value: '17+', label: 'Years of industry experience' },
+  { value: '35 FTE', label: 'Multi-location analytics delivery team built at Bank of America' },
+  { value: '$8M', label: 'Transformation delivery budget managed for risk monitoring modernization' },
+  { value: '~$300M', label: 'Penalty exposure avoided through major AML MRA execution' }
+];
+
+const credentialsSections = [
+  {
+    title: 'Education',
+    items: [
+      'Education details are not listed in the provided 2021 resume PDF.',
+      'The resume emphasizes professional depth across analytics leadership, financial crimes, AML, risk analytics, wealth management, and analytics transformation.'
+    ]
+  },
+  {
+    title: 'White papers',
+    items: [
+      'White papers are not listed in the provided 2021 resume PDF.',
+      'The resume does list thought-leadership domains that now inform current writing: Anti-Money Laundering, Model Validation, Transaction Monitoring, KYC, Sanctions, Compliance Testing, Data Quality and Governance, and Analytics Transformation.'
+    ]
+  },
+  {
+    title: 'Accomplishments',
+    items: [
+      'Analytics leader with 12+ years of experience as of the 2021 resume, working across Financial Crimes, Anti-Money Laundering, Operational/Credit Risk Analytics, and Wealth Management for major global banks.',
+      'As APAC Regional Lead at Citi, managed an Independent Validation team of 15 FTE statisticians across Bangalore, Pune, and Kuala Lumpur.',
+      'At Citi, validation scope included AML scenarios, KYC risk scoring tool, and predictive models.',
+      'As Financial Crimes and Operational Analytics delivery head for Bank of America, transformed manual Risk Monitoring into an analytics-based, technology-managed program within an $8 million budget.',
+      'Built a 35 FTE multi-location analytics delivery team for Bank of America.',
+      'Headed a Financial Crimes team with end-to-end execution ownership for 3 major AML MRA projects: OCC 11-12, 12 CFR Part 30, and 12 CFR 21.11.',
+      'AML MRA execution avoided penalty exposure of approximately $300 million.',
+      'Drove HSBC strategic initiatives across Wealth Management, Customer Acquisition, and Cross/Up Selling wealth products to 2.4 million HNI customers, driving $360 million in incremental sales.',
+      'Built high-performance analytics teams with responsibility for hiring, coaching, performance evaluation, talent development, and retention.',
+      'Drove data-intelligence initiatives to improve customer engagement and mitigate operational risk.',
+      'Enabled analytics transformation through change management, stakeholder engagement, resource planning, implementation, and stabilization.'
+    ]
+  },
+  {
+    title: 'Patents and publications',
+    items: [
+      'Patents are not listed in the provided 2021 resume PDF.',
+      'Publications are not listed in the provided 2021 resume PDF.',
+      'The resume does list applied expertise areas that support current publications and articles: Predictive Modelling, Machine Learning, Visual Analytics, Segmentation, Clustering, Sampling Design, Descriptive Analysis, NLP, SAS, Python, Tableau, Teradata SQL, MS Excel Macros, AWS, and Bigdata-Spark.'
+    ]
+  },
+  {
+    title: 'Affiliations',
+    items: [
+      'Citi: APAC Regional Lead managing Independent Validation work for AML scenarios, KYC risk scoring, and predictive models.',
+      'Bank of America: Financial Crimes and Operational Analytics delivery leadership for risk monitoring transformation.',
+      'HSBC: Strategic initiatives across Wealth Management, Customer Acquisition, and Cross/Up Selling wealth products.',
+      'Professional domain affiliations include Anti-Money Laundering, Model Validation, Transaction Monitoring, KYC, Watch-list, Sanctions, Risk Rating Methodology, Compliance Testing, Operational Risk and Control, Model Risk Management, Data Quality and Governance, Credit Risk Modelling, and VaR Analysis and Metrics.'
+    ]
+  }
+];
 
 export default function JourneyPage() {
   return (
@@ -110,13 +168,22 @@ export default function JourneyPage() {
         description="The timeline connects my formal enterprise roles with independent systems work, experimentation, and contributions to the AI community."
       />
       <section className="mx-auto max-w-content px-5 py-14 sm:py-16">
+        <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {keyHighlights.map((highlight) => (
+            <div key={highlight.label} className="rounded-3xl border border-brand-copper/20 bg-white/80 p-5 shadow-sm shadow-ink-900/5 dark:border-ink-800 dark:bg-ink-900/45">
+              <p className="text-3xl font-semibold tracking-tight text-brand-blue">{highlight.value}</p>
+              <p className="mt-2 text-sm leading-6 text-ink-700 dark:text-ink-300">{highlight.label}</p>
+            </div>
+          ))}
+        </div>
+
         <div className="grid gap-10 lg:grid-cols-[260px_1fr]">
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <div className="rounded-3xl border border-brand-copper/25 bg-white/75 p-5 shadow-lg shadow-brand-navy/10 backdrop-blur dark:border-ink-800 dark:bg-ink-900/45">
               <p className="flex items-center gap-2 text-sm font-semibold text-brand-navy dark:text-white"><Icon name="briefcase" className="h-4 w-4" /> Timeline</p>
               <div className="mt-5 space-y-1 border-l border-brand-copper/40 pl-4 dark:border-ink-700">
                 {journey.map((item) => (
-                  <a key={`${item.years}-${item.organization}`} href={`#${anchorFor(item.period)}`} className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-700 transition hover:bg-brand-sand hover:text-brand-navy focus:bg-brand-navy focus:text-white dark:text-ink-300 dark:hover:bg-ink-800 dark:hover:text-white">
+                  <a key={`${item.years}-${item.organization}`} href={`#${anchorFor(item.period)}`} className="block rounded-xl px-3 py-2 text-sm font-medium text-ink-700 transition hover:bg-brand-sky hover:text-brand-navy focus:bg-brand-sky focus:text-brand-navy dark:text-ink-300 dark:hover:bg-brand-sky/20 dark:hover:text-white">
                     <span className="block font-semibold text-brand-blue dark:text-brand-sand">{item.years}</span>
                     {item.organization}
                   </a>
@@ -138,6 +205,25 @@ export default function JourneyPage() {
                 <p className="mt-5 text-lg leading-8 text-ink-700 dark:text-ink-300">{item.context}</p>
                 <ul className="mt-5 space-y-3 text-ink-700 dark:text-ink-300">
                   {item.details.map((detail) => <li key={detail} className="flex gap-3"><Icon name="spark" className="mt-1 h-4 w-4 shrink-0 text-brand-copper" /> <span>{detail}</span></li>)}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14">
+          <div className="mb-8">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand-blue dark:text-brand-sand">Beyond the timeline</p>
+            <h2 className="text-3xl font-semibold tracking-tight text-brand-navy dark:text-white">Education, white papers, accomplishments, patents and publications, and affiliations</h2>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2">
+            {credentialsSections.map((section) => (
+              <article key={section.title} className="rounded-3xl border border-brand-copper/20 bg-white/75 p-6 shadow-sm shadow-ink-900/5 dark:border-ink-800 dark:bg-ink-900/45">
+                <h3 className="text-xl font-semibold text-brand-navy dark:text-white">{section.title}</h3>
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-ink-700 dark:text-ink-300">
+                  {section.items.map((item) => (
+                    <li key={item} className="flex gap-3"><Icon name="spark" className="mt-1 h-4 w-4 shrink-0 text-brand-blue" /> <span>{item}</span></li>
+                  ))}
                 </ul>
               </article>
             ))}

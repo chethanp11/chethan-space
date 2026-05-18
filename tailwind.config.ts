@@ -29,6 +29,7 @@ const config: Config = {
         brand: {
           navy: '#123047',
           blue: '#1f5f8b',
+          sky: '#e6f4ff',
           sage: '#6f8376',
           sand: '#f4efe7',
           copper: '#b7794a',

@@ -51,7 +51,7 @@ export function MobileNav() {
                   className={`rounded-2xl px-4 py-4 text-base font-semibold transition ${
                     active
                       ? 'bg-brand-navy text-white shadow-sm shadow-brand-navy/20'
-                      : 'bg-white/80 text-ink-800 hover:bg-brand-sand hover:text-brand-navy'
+                      : 'bg-white/80 text-ink-800 hover:bg-brand-sky hover:text-brand-navy'
                   }`}
                 >
                   {item.label}

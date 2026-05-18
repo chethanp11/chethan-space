@@ -24,7 +24,7 @@ export function NavLinks() {
             className={`rounded-full px-3 py-2 font-medium transition ${
               active
                 ? 'bg-brand-navy text-white shadow-sm shadow-brand-navy/20'
-                : 'hover:bg-brand-sand hover:text-brand-navy'
+                : 'hover:bg-brand-sky hover:text-brand-navy'
             }`}
           >
             {item.label}

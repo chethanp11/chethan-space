@@ -20,8 +20,8 @@ export default function ContactPage() {
     <section className="mx-auto max-w-content px-5 py-14 sm:py-16">
       <div className="grid gap-4 md:grid-cols-3">
         {contacts.map((contact) => (
-          <Link key={contact.label} href={contact.href} target="_blank" rel="noopener noreferrer" className="group rounded-3xl border border-brand-copper/20 bg-white/80 p-6 shadow-sm shadow-ink-900/5 transition duration-300 hover:-translate-y-1 hover:border-brand-copper/60 hover:bg-brand-navy hover:text-white hover:shadow-xl hover:shadow-brand-navy/10 dark:border-ink-800 dark:bg-ink-900/45 dark:text-white dark:hover:bg-brand-sand dark:hover:text-ink-950">
-            <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-sand text-brand-navy transition group-hover:bg-white/15 group-hover:text-white dark:bg-ink-950 dark:text-brand-sand dark:group-hover:bg-ink-950/10 dark:group-hover:text-ink-950">
+          <Link key={contact.label} href={contact.href} target="_blank" rel="noopener noreferrer" className="group rounded-3xl border border-brand-copper/20 bg-white/80 p-6 shadow-sm shadow-ink-900/5 transition duration-300 hover:-translate-y-1 hover:border-brand-blue/40 hover:bg-brand-sky hover:text-brand-navy hover:shadow-xl hover:shadow-brand-navy/10 dark:border-ink-800 dark:bg-ink-900/45 dark:text-white dark:hover:bg-brand-sky dark:hover:text-brand-navy">
+            <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-sand text-brand-navy transition group-hover:bg-white group-hover:text-brand-blue dark:bg-ink-950 dark:text-brand-sand dark:group-hover:bg-ink-950/10 dark:group-hover:text-ink-950">
               <Icon name={contact.icon} />
             </span>
             <span className="mt-5 block text-xl font-semibold">{contact.label}</span>

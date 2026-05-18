@@ -35,6 +35,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
         </div>
       </PageBanner>
       <article className="mx-auto max-w-content px-5 py-14">
+        {item.coverImage ? <img src={item.coverImage} alt="" className="mb-10 h-72 w-full rounded-[2rem] object-cover shadow-lg shadow-brand-navy/10" /> : null}
         <div className="prose prose-ink max-w-prose dark:prose-invert prose-headings:tracking-tight prose-a:text-ink-950 dark:prose-a:text-white">
           <MDXRemote source={item.body} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm], rehypePlugins: [[rehypePrettyCode, { theme: 'github-dark' }]] } }} />
         </div>

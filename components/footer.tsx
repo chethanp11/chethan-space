@@ -13,7 +13,7 @@ export function Footer() {
             ['GitHub', siteConfig.links.github, 'github'],
             [siteConfig.links.emailAddress, siteConfig.links.email, 'email']
           ].map(([label, href, icon]) => (
-            <Link key={href} href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-brand-copper/20 bg-white/50 px-3 py-2 font-semibold text-brand-navy transition hover:bg-brand-navy hover:text-white">
+            <Link key={href} href={href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-brand-copper/20 bg-white/50 px-3 py-2 font-semibold text-brand-navy transition hover:bg-brand-sky hover:text-brand-navy">
               <Icon name={icon as 'linkedin' | 'github' | 'email'} className="h-4 w-4" />
               {label}
             </Link>
