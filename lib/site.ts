@@ -8,7 +8,8 @@ export const siteConfig = {
   links: {
     linkedin: 'https://www.linkedin.com/in/chethanp11',
     github: 'https://github.com/chethanp11',
-    email: 'mailto:chethanp11@gmail.com'
+    email: 'mailto:chethanp11@gmail.com',
+    emailAddress: 'chethanp11@gmail.com'
   }
 };
 

@@ -11,6 +11,7 @@ export function Callout({ title, children }: { title?: string; children: React.R
 
 export const mdxComponents = {
   Callout,
+  a: (props: ComponentProps<'a'>) => <a target="_blank" rel="noopener noreferrer" {...props} />,
   h2: (props: ComponentProps<'h2'>) => <h2 className="scroll-mt-24" {...props} />,
   h3: (props: ComponentProps<'h3'>) => <h3 className="scroll-mt-24" {...props} />
 };

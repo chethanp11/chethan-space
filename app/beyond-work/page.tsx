@@ -44,7 +44,7 @@ export default function BeyondWorkPage() {
               <p className="mt-4 text-lg leading-8 text-ink-800 dark:text-ink-200">{hobby.summary}</p>
               <p className="mt-4 leading-7 text-ink-700 dark:text-ink-300">{hobby.detail}</p>
               {hobby.link ? (
-                <a href={hobby.link} className="mt-6 inline-flex text-sm font-semibold text-brand-blue underline underline-offset-4 dark:text-brand-sand">
+                <a href={hobby.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex text-sm font-semibold text-brand-blue underline underline-offset-4 dark:text-brand-sand">
                   {hobby.linkLabel}
                 </a>
               ) : null}

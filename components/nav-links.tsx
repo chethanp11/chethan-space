@@ -20,6 +20,8 @@ export function NavLinks() {
           <Link
             key={item.href}
             href={item.href}
+            target="_blank"
+            rel="noopener noreferrer"
             aria-current={active ? 'page' : undefined}
             className={`rounded-full px-3 py-2 font-medium transition ${
               active

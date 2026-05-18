@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HomeBack } from '@/components/home-back';
+import { Icon } from '@/components/icons';
 import { PageBanner } from '@/components/page-banner';
 import { Section } from '@/components/section';
 
@@ -25,6 +26,51 @@ const passions = [
     story:
       'Teaching kids keeps the work honest. The goal is not to make technology feel magical or intimidating, but to make it understandable: how ideas become prototypes, how data becomes answers, how AI needs judgment, and how young builders can use these tools with curiosity, care, and confidence.',
     link: ''
+  }
+];
+
+const professionalTimeline = [
+  {
+    period: 'Early career',
+    organization: 'HSBC and Target',
+    title: 'Analytics and business technology foundation',
+    detail: 'Built the early foundation across analytics, business problem solving, execution discipline, and stakeholder-oriented delivery.'
+  },
+  {
+    period: '2012 to 2018',
+    organization: 'Bank of America',
+    title: 'Analytics delivery and transformation',
+    detail: 'Worked on large-scale analytics and operational transformation, strengthening repeatable delivery, governance, controls, and business impact.'
+  },
+  {
+    period: '2018 to 2021',
+    organization: 'Citi — Anti Money Laundering',
+    title: 'AML analytics and financial-crimes focus',
+    detail: 'Contributed to anti-money-laundering analytics, risk monitoring, control discipline, and financial-crimes operating rigor.'
+  },
+  {
+    period: '2021 to 2024',
+    organization: 'Citi',
+    title: 'Remediation Data Analytics leader',
+    detail: 'Led remediation data analytics work with focus on data quality, measurement, governance, stakeholder trust, and execution at scale.'
+  },
+  {
+    period: '2024 to Now',
+    organization: 'Citi',
+    title: 'Remediation Business Analytics leader',
+    detail: 'Leading business analytics for remediation, connecting analytics execution with business outcomes, governance needs, and operating decisions.'
+  },
+  {
+    period: '2025 to Now',
+    organization: 'Citi AI Transformation workgroup',
+    title: 'AI transformation contributor',
+    detail: 'Contributing to AI transformation work, responsible adoption, practical use cases, and the operating model needed for AI-enabled enterprise execution.'
+  },
+  {
+    period: '2024 to Now',
+    organization: 'Independent work',
+    title: 'Systems, frameworks, experimentation, and AI community contribution',
+    detail: 'Developing independent systems, frameworks, experiments, and public thinking that contribute to practical AI learning and community knowledge.'
   }
 ];
 
@@ -60,12 +106,18 @@ export default function AboutPage() {
         </div>
       </section>
       <Section eyebrow="Journey" title="Career journey">
-        <div className="space-y-5">
-          {['Analytics modernization and data product foundations', 'Enterprise workflow and reporting transformation', 'Responsible AI systems and intelligent orchestration'].map((item, index) => (
-            <div key={item} className="rounded-2xl border border-brand-copper/20 bg-white/60 p-6 dark:border-ink-800 dark:bg-ink-900/40">
-              <p className="font-mono text-sm text-brand-blue dark:text-brand-sand">0{index + 1}</p>
-              <h3 className="mt-2 text-xl font-semibold text-brand-navy dark:text-white">{item}</h3>
-              <p className="mt-3 text-ink-700 dark:text-ink-300">A phase focused on building reusable capabilities, improving decision systems, and aligning technical delivery with enterprise operating models.</p>
+        <div className="relative space-y-5 before:absolute before:bottom-6 before:left-6 before:top-6 before:w-px before:bg-brand-copper/30 dark:before:bg-ink-700">
+          {professionalTimeline.map((item, index) => (
+            <div key={`${item.period}-${item.title}`} className="relative grid gap-4 rounded-3xl border border-brand-copper/20 bg-white/75 p-6 pl-16 shadow-sm shadow-ink-900/5 transition hover:-translate-y-0.5 hover:border-brand-copper/50 hover:shadow-lg hover:shadow-brand-navy/10 dark:border-ink-800 dark:bg-ink-900/40">
+              <span className="absolute left-[13px] top-6 grid h-7 w-7 place-items-center rounded-full border border-brand-copper/30 bg-brand-sand text-xs font-bold text-brand-navy dark:border-ink-700 dark:bg-ink-950 dark:text-brand-sand">{index + 1}</span>
+              <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-blue dark:text-brand-sand">
+                <Icon name="briefcase" className="h-4 w-4" />
+                <span>{item.period}</span>
+                <span>·</span>
+                <span>{item.organization}</span>
+              </div>
+              <h3 className="text-xl font-semibold text-brand-navy dark:text-white">{item.title}</h3>
+              <p className="leading-7 text-ink-700 dark:text-ink-300">{item.detail}</p>
             </div>
           ))}
         </div>
@@ -81,8 +133,9 @@ export default function AboutPage() {
               <p className="mt-4 text-lg leading-8 text-ink-800 dark:text-ink-200">{passion.summary}</p>
               <p className="mt-4 leading-7 text-ink-700 dark:text-ink-300">{passion.story}</p>
               {passion.link ? (
-                <Link href={passion.link} className="mt-6 inline-flex text-sm font-semibold text-brand-blue underline underline-offset-4 dark:text-brand-sand">
+                <Link href={passion.link} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-brand-blue underline underline-offset-4 dark:text-brand-sand">
                   View SiriBhoomi Organic Farm on Google Maps
+                  <Icon name="arrow" className="h-4 w-4" />
                 </Link>
               ) : null}
             </div>
@@ -102,7 +155,7 @@ export default function AboutPage() {
       <Section eyebrow="Mission" title="What I am building toward">
         <div className="rounded-3xl border border-brand-copper/25 bg-brand-sand/70 p-8 dark:border-ink-800 dark:bg-ink-900/40">
           <p className="max-w-3xl text-xl leading-9 text-ink-800 dark:text-ink-200">I want to build a credible, useful, and evolving body of work around technology leadership, practical AI, analytics transformation, responsible systems, and personal learning.</p>
-          <Link href="/journey" className="mt-6 inline-flex rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-blue dark:bg-brand-sand dark:text-ink-950">View Professional Journey</Link>
+          <Link href="/journey" target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded-full bg-brand-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-blue dark:bg-brand-sand dark:text-ink-950">View Professional Journey <Icon name="arrow" className="h-4 w-4" /></Link>
         </div>
       </Section>
     </>

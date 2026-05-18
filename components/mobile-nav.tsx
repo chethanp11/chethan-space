@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { navItems } from '@/lib/site';
 
 function isActive(pathname: string, href: string) {
@@ -14,6 +14,15 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
+
   return (
     <div className="md:hidden">
       <button
@@ -21,25 +30,30 @@ export function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-navigation"
         onClick={() => setOpen((value) => !value)}
-        className="rounded-full border border-brand-copper/30 bg-white/70 px-3 py-2 text-sm font-semibold text-brand-navy dark:border-ink-700 dark:bg-ink-900/70 dark:text-white"
+        className="rounded-full border border-brand-copper/30 bg-white px-4 py-2 text-sm font-semibold text-brand-navy shadow-sm shadow-ink-900/5 dark:border-ink-700 dark:bg-ink-900 dark:text-white"
       >
         {open ? 'Close' : 'Menu'}
       </button>
       {open ? (
-        <div id="mobile-navigation" className="absolute left-4 right-4 top-[4.5rem] rounded-3xl border border-brand-copper/25 bg-brand-ivory/98 p-4 shadow-xl shadow-brand-navy/15 backdrop-blur dark:border-ink-800 dark:bg-ink-950/98">
-          <nav className="grid gap-1">
+        <div
+          id="mobile-navigation"
+          className="fixed inset-x-0 bottom-0 top-[72px] z-[100] overflow-y-auto border-t border-brand-copper/20 bg-brand-ivory px-5 py-5 shadow-2xl shadow-brand-navy/20 dark:border-ink-800 dark:bg-ink-950"
+        >
+          <nav className="mx-auto grid max-w-content gap-2">
             {navItems.map((item) => {
               const active = isActive(pathname, item.href);
               return (
                 <Link
                   key={item.href}
                   href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-current={active ? 'page' : undefined}
                   onClick={() => setOpen(false)}
-                  className={`rounded-2xl px-4 py-3 text-base font-medium transition ${
+                  className={`rounded-2xl px-4 py-4 text-base font-semibold transition ${
                     active
-                      ? 'bg-brand-navy text-white dark:bg-brand-sand dark:text-ink-950'
-                      : 'text-ink-800 hover:bg-brand-sand dark:text-ink-100 dark:hover:bg-ink-900'
+                      ? 'bg-brand-navy text-white shadow-sm shadow-brand-navy/20 dark:bg-brand-sand dark:text-ink-950'
+                      : 'bg-white/80 text-ink-800 hover:bg-brand-sand hover:text-brand-navy dark:bg-ink-900/70 dark:text-ink-100 dark:hover:bg-ink-800 dark:hover:text-white'
                   }`}
                 >
                   {item.label}
