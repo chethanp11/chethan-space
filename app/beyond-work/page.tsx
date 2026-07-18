@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import { HomeBack } from '@/components/home-back';
 import { PageBanner } from '@/components/page-banner';
+import { createPageMetadata } from '@/lib/content-metadata';
 
-export const metadata: Metadata = {
-  title: 'Beyond Work',
-  description: 'The interests and commitments that keep Chethan Puttegowda grounded beyond professional work.'
-};
+export const metadata: Metadata = createPageMetadata(
+  'Beyond Work',
+  'The interests and commitments that keep Chethan Puttegowda grounded beyond professional work.',
+  '/beyond-work'
+);
 
 const hobbies = [
   {

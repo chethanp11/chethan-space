@@ -79,6 +79,23 @@ export function getFeatured(kind: ContentKind, limit = 3): ContentItem[] {
     .slice(0, limit);
 }
 
+export function getCollectionMeta(kind: ContentKind): ContentMeta[] {
+  return getCollection(kind).map((item) => ({
+    slug: item.slug,
+    kind: item.kind,
+    title: item.title,
+    summary: item.summary,
+    date: item.date,
+    tags: item.tags,
+    category: item.category,
+    status: item.status,
+    featured: item.featured,
+    coverImage: item.coverImage,
+    featureImage: item.featureImage,
+    readingTime: item.readingTime
+  }));
+}
+
 export function getItem(kind: ContentKind, slug: string): ContentItem | undefined {
   return getCollection(kind).find((item) => item.slug === slug);
 }

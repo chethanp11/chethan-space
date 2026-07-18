@@ -3,9 +3,14 @@ import Link from 'next/link';
 import { HomeBack } from '@/components/home-back';
 import { Icon, type IconName } from '@/components/icons';
 import { PageBanner } from '@/components/page-banner';
+import { createPageMetadata } from '@/lib/content-metadata';
 import { siteConfig } from '@/lib/site';
 
-export const metadata: Metadata = { title: 'Contact', description: 'Connect with Chethan Puttegowda on LinkedIn, GitHub, or email.' };
+export const metadata: Metadata = createPageMetadata(
+  'Contact',
+  'Connect with Chethan Puttegowda on LinkedIn, GitHub, or email.',
+  '/contact'
+);
 
 const contacts: Array<{ label: string; value: string; href: string; icon: IconName; note: string }> = [
   { label: 'LinkedIn', value: 'chethanp11', href: siteConfig.links.linkedin, icon: 'linkedin', note: 'Professional updates and conversations' },

@@ -34,7 +34,7 @@ export function WorkshopInterest() {
 
       setFormState({ name: '', email: '', currentLevel: '', interests: '', message: '' });
       setStatus('success');
-    } catch (err) {
+    } catch {
       setStatus('error');
       setError('Unable to submit interest. Please try again.');
     }
@@ -49,63 +49,82 @@ export function WorkshopInterest() {
 
       <form onSubmit={handleSubmit} className="mt-8 space-y-4">
         <div>
-          <label className="block text-sm font-semibold text-ink-700 dark:text-ink-200">Name</label>
+          <label htmlFor="workshop-name" className="block text-sm font-semibold text-ink-700 dark:text-ink-200">Name</label>
           <input
+            id="workshop-name"
+            name="name"
+            autoComplete="name"
             value={formState.name}
             onChange={(event) => setFormState({ ...formState, name: event.target.value })}
             className="mt-2 w-full rounded-2xl border border-ink-300 bg-white px-4 py-3 text-sm text-ink-900 shadow-sm outline-none transition focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
             placeholder="Your name"
+            maxLength={100}
             required
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-ink-700 dark:text-ink-200">Email</label>
+          <label htmlFor="workshop-email" className="block text-sm font-semibold text-ink-700 dark:text-ink-200">Email</label>
           <input
+            id="workshop-email"
+            name="email"
             type="email"
+            autoComplete="email"
             value={formState.email}
             onChange={(event) => setFormState({ ...formState, email: event.target.value })}
             className="mt-2 w-full rounded-2xl border border-ink-300 bg-white px-4 py-3 text-sm text-ink-900 shadow-sm outline-none transition focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
             placeholder="Your email"
+            maxLength={254}
             required
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-ink-700 dark:text-ink-200">Current experience</label>
+          <label htmlFor="workshop-experience" className="block text-sm font-semibold text-ink-700 dark:text-ink-200">Current experience</label>
           <input
+            id="workshop-experience"
+            name="currentLevel"
             value={formState.currentLevel}
             onChange={(event) => setFormState({ ...formState, currentLevel: event.target.value })}
             className="mt-2 w-full rounded-2xl border border-ink-300 bg-white px-4 py-3 text-sm text-ink-900 shadow-sm outline-none transition focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
             placeholder="Beginner, curious, building already..."
+            maxLength={160}
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-ink-700 dark:text-ink-200">What interests you most?</label>
+          <label htmlFor="workshop-interests" className="block text-sm font-semibold text-ink-700 dark:text-ink-200">What interests you most?</label>
           <textarea
+            id="workshop-interests"
+            name="interests"
             value={formState.interests}
             onChange={(event) => setFormState({ ...formState, interests: event.target.value })}
             className="mt-2 w-full rounded-2xl border border-ink-300 bg-white px-4 py-3 text-sm text-ink-900 shadow-sm outline-none transition focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
             placeholder="Tell me what you want to build or learn"
             rows={4}
+            maxLength={2000}
             required
           />
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-ink-700 dark:text-ink-200">Anything else to share?</label>
+          <label htmlFor="workshop-message" className="block text-sm font-semibold text-ink-700 dark:text-ink-200">Anything else to share?</label>
           <textarea
+            id="workshop-message"
+            name="message"
             value={formState.message}
             onChange={(event) => setFormState({ ...formState, message: event.target.value })}
             className="mt-2 w-full rounded-2xl border border-ink-300 bg-white px-4 py-3 text-sm text-ink-900 shadow-sm outline-none transition focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20"
             placeholder="Your background, goals, or preferred project domain"
             rows={4}
+            maxLength={2000}
           />
         </div>
 
-        {error ? <p className="text-sm font-medium text-red-600">{error}</p> : null}
-        {status === 'success' ? <p className="text-sm font-medium text-brand-blue">Thank you — your interest is recorded.</p> : null}
+        <div aria-live="polite">
+          {error ? <p className="text-sm font-medium text-red-600">{error}</p> : null}
+          {status === 'success' ? <p className="text-sm font-medium text-brand-blue">Thank you — your interest is recorded.</p> : null}
+        </div>
 
         <button
           type="submit"

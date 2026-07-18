@@ -10,6 +10,7 @@ import { mdxComponents } from '@/components/mdx-components';
 import { PageBanner } from '@/components/page-banner';
 import { getCollection, getItem } from '@/lib/content';
 import { formatDate } from '@/lib/format';
+import { siteConfig } from '@/lib/site';
 
 export function generateStaticParams() {
   return getCollection('insights').map((item) => ({ slug: item.slug }));
@@ -20,12 +21,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const item = getItem('insights', slug);
   if (!item) return {};
   const featureImage = item.featureImage ?? item.coverImage;
-  const images = featureImage ? [{ url: featureImage, width: 1200, height: 1200, alt: item.title }] : undefined;
+  const canonicalPath = `/insights/${slug}`;
+  const canonicalUrl = new URL(canonicalPath, siteConfig.url).toString();
+  const featureImageUrl = featureImage ? new URL(featureImage, siteConfig.url).toString() : undefined;
+  const images = featureImageUrl ? [{ url: featureImageUrl, width: 1200, height: 1200, alt: item.title, type: 'image/png' }] : undefined;
+
   return {
     title: item.title,
     description: item.summary,
-    openGraph: { title: item.title, description: item.summary, type: 'article', publishedTime: item.date, images },
-    twitter: { card: 'summary_large_image', title: item.title, description: item.summary, images: featureImage ? [featureImage] : undefined }
+    alternates: { canonical: canonicalPath },
+    openGraph: { title: item.title, description: item.summary, type: 'article', url: canonicalUrl, siteName: siteConfig.name, publishedTime: item.date, images },
+    twitter: { card: 'summary_large_image', title: item.title, description: item.summary, images: featureImageUrl ? [featureImageUrl] : undefined }
   };
 }
 
@@ -38,13 +44,13 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
     <>
       <HomeBack href="/insights" label="Back to Thoughts" />
       <section className="mx-auto max-w-content px-5 pt-6">
-        <div className="grid gap-6 lg:grid-cols-[320px_1fr] lg:items-stretch">
+        <div className="grid gap-6 lg:grid-cols-[320px_1fr] lg:items-start">
           {featureImage ? (
-            <div className="overflow-hidden rounded-[2rem] border border-brand-copper/20 bg-white/70 shadow-lg shadow-brand-navy/10">
-              <Image src={featureImage} alt={item.title} width={1200} height={1200} className="aspect-square h-full w-full object-cover" priority />
+            <div className="aspect-square overflow-hidden rounded-[2rem] border border-brand-copper/20 bg-white/70 shadow-lg shadow-brand-navy/10">
+              <Image src={featureImage} alt={item.title} width={1200} height={1200} sizes="(min-width: 1024px) 320px, 100vw" className="h-full w-full object-cover" priority />
             </div>
           ) : null}
-          <PageBanner tone="writing" eyebrow={item.category} title={item.title} description={item.summary}>
+          <PageBanner embedded tone="writing" eyebrow={item.category} title={item.title} description={item.summary}>
             <div className="space-y-4">
               <TagList tags={item.tags} />
               <p className="text-sm text-ink-600 dark:text-ink-300">{formatDate(item.date)} · {item.readingTime}</p>

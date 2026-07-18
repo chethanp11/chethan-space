@@ -5,19 +5,19 @@ import { getCollection, getItem } from '@/lib/content';
 import { createContentMetadata } from '@/lib/content-metadata';
 
 export function generateStaticParams() {
-  return getCollection('projects').map((item) => ({ slug: item.slug }));
+  return getCollection('lab').map((item) => ({ slug: item.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const item = getItem('projects', slug);
-  return item ? createContentMetadata(item, `/projects/${slug}`) : {};
+  const item = getItem('lab', slug);
+  return item ? createContentMetadata(item, `/lab/${slug}`) : {};
 }
 
-export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function LabPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const item = getItem('projects', slug);
+  const item = getItem('lab', slug);
   if (!item) notFound();
 
-  return <ContentDetail item={item} backHref="/projects" backLabel="Back to Projects" tone="projects" />;
+  return <ContentDetail item={item} backHref="/projects#lab" backLabel="Back to Lab" tone="lab" />;
 }

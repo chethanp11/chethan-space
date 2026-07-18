@@ -41,6 +41,8 @@ MODE=prod npm run start:clean
 
 ```bash
 npm run typecheck
+npm run lint
+npm test
 npm run build
 ```
 
@@ -65,10 +67,10 @@ category: Enterprise AI
 date: '2026-01-01'
 status: Draft
 featured: true
-coverImage: /images/example.png
+featureImage: /images/example.png
 ```
 
-`date`, `status`, `featured`, and `coverImage` are optional depending on collection. Body content supports Markdown, code fences, GFM tables/lists, and reusable MDX components like `<Callout title="Note">...</Callout>`.
+`date`, `status`, `featured`, and `featureImage` are optional depending on collection. `coverImage` remains supported as a backwards-compatible image field. Body content supports Markdown, code fences, GFM tables/lists, and reusable MDX components like `<Callout title="Note">...</Callout>`.
 
 ## Site configuration
 
@@ -77,6 +79,8 @@ Edit `lib/site.ts` for name, canonical URL, social links, and email.
 ## Deployment
 
 Deploy to Vercel. Set `NEXT_PUBLIC_SITE_URL` to the production URL for canonical links and sitemap output.
+
+Workshop submissions use `data/workshop-interest.json` during local development. For Vercel or another serverless deployment, set `WORKSHOP_INTEREST_WEBHOOK_URL` to a private HTTPS endpoint backed by durable storage. The webhook receives the validated submission record as JSON. If the variable is missing on Vercel, the API returns `503` rather than reporting a submission that was not persisted.
 
 ```bash
 npm run build

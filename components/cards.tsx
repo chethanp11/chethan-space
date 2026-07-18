@@ -1,5 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { ContentItem } from '@/lib/content';
+import type { ContentMeta } from '@/lib/content';
 import { formatDate } from '@/lib/format';
 import { Icon } from './icons';
 
@@ -15,11 +16,22 @@ export function TagList({ tags }: { tags: string[] }) {
   );
 }
 
-export function ContentCard({ item, href }: { item: ContentItem; href: string }) {
+export function ContentCard({ item, href }: { item: ContentMeta; href: string }) {
+  const featureImage = item.featureImage ?? item.coverImage;
+
   return (
     <Link href={href} className="group relative block overflow-hidden rounded-3xl border border-brand-copper/20 bg-white/80 p-6 shadow-sm shadow-ink-900/5 transition duration-300 hover:-translate-y-1 hover:border-brand-blue/40 hover:bg-brand-sky/80 hover:shadow-xl hover:shadow-brand-navy/10">
       <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-full bg-gradient-to-br from-brand-blue/10 to-brand-copper/15 transition group-hover:scale-125" />
-      {item.coverImage ? <img src={item.coverImage} alt="" className="relative mb-5 h-32 w-full rounded-2xl object-cover" /> : null}
+      {featureImage ? (
+        <Image
+          src={featureImage}
+          alt={item.title}
+          width={1200}
+          height={1200}
+          sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+          className="relative mb-5 aspect-square w-full rounded-2xl object-cover"
+        />
+      ) : null}
       <div className="mb-4 flex items-center justify-between gap-4 text-xs uppercase tracking-[0.18em] text-brand-blue">
         <span>{item.category}</span>
         <span>{item.status ?? item.readingTime}</span>

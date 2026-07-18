@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import { HomeBack } from '@/components/home-back';
 import { Icon } from '@/components/icons';
 import { PageBanner } from '@/components/page-banner';
+import { createPageMetadata } from '@/lib/content-metadata';
 
-export const metadata: Metadata = {
-  title: 'Professional Journey',
-  description: 'A timeline of Chethan Puttegowda’s professional journey across analytics leadership, financial crimes, remediation analytics, AI transformation, and independent systems work.'
-};
+export const metadata: Metadata = createPageMetadata(
+  'Professional Journey',
+  'A timeline of Chethan Puttegowda’s professional journey across analytics leadership, financial crimes, remediation analytics, AI transformation, and independent systems work.',
+  '/journey'
+);
 
 const journey = [
   {
@@ -26,7 +28,7 @@ const journey = [
   {
     period: '2025 to Now',
     years: '2025–Now',
-    organization: 'Citi AI Transformation workgroup',
+    organization: 'Citi AI Transformation Workgroup',
     role: 'AI Transformation Contributor',
     context: 'Contributing to enterprise AI transformation with focus on practical use cases, responsible adoption, workflow design, and governance-aware operating models.',
     details: [
@@ -51,7 +53,7 @@ const journey = [
   {
     period: '2021 to 2024',
     years: '2021–2024',
-    organization: 'CITI Remediation data Analytics',
+    organization: 'Citi Remediation Data Analytics',
     role: 'Remediation Data Analytics Leader',
     context: 'Led remediation data analytics with focus on data quality, governance, measurement discipline, stakeholder trust, and scalable analytics execution.',
     details: [
@@ -103,7 +105,7 @@ function articleClassFor(organization: string) {
   if (organization === 'AI Community Contributions') {
     return `${base} border-brand-blue/45 bg-gradient-to-br from-brand-sky/95 via-white/90 to-brand-blue/10 hover:border-brand-blue/70`;
   }
-  if (organization === 'Citi AI Transformation workgroup') {
+  if (organization === 'Citi AI Transformation Workgroup') {
     return `${base} border-brand-copper/45 bg-gradient-to-br from-brand-sand/90 via-white/90 to-brand-copper/10 hover:border-brand-copper/70`;
   }
   return `${base} border-brand-copper/25 bg-white/80 hover:border-brand-copper/55`;
@@ -111,7 +113,7 @@ function articleClassFor(organization: string) {
 
 function markerClassFor(organization: string) {
   if (organization === 'AI Community Contributions') return 'border-brand-blue/40 bg-brand-blue text-white';
-  if (organization === 'Citi AI Transformation workgroup') return 'border-brand-copper/45 bg-brand-copper text-white';
+  if (organization === 'Citi AI Transformation Workgroup') return 'border-brand-copper/45 bg-brand-copper text-white';
   return 'border-brand-copper/35 bg-brand-sand text-brand-navy dark:border-ink-700 dark:bg-ink-950 dark:text-brand-sand';
 }
 

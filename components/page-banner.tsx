@@ -25,9 +25,18 @@ const bannerIcons: Record<BannerTone, IconName> = {
   contact: 'email'
 };
 
-export function PageBanner({ eyebrow, title, description, tone = 'about', children }: { eyebrow: string; title: string; description?: string; tone?: BannerTone; children?: ReactNode }) {
+type PageBannerProps = {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  tone?: BannerTone;
+  children?: ReactNode;
+  embedded?: boolean;
+};
+
+export function PageBanner({ eyebrow, title, description, tone = 'about', children, embedded = false }: PageBannerProps) {
   return (
-    <section className="mx-auto max-w-content px-5 pt-6">
+    <section className={embedded ? 'min-w-0' : 'mx-auto max-w-content px-5 pt-6'}>
       <div className={`relative overflow-hidden rounded-[2rem] border border-brand-copper/25 bg-gradient-to-br ${bannerStyles[tone]} p-7 shadow-sm shadow-brand-navy/10 ring-1 ring-white/60 sm:p-9`}>
         <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(18,48,71,.12)_1px,transparent_1px),linear-gradient(90deg,rgba(18,48,71,.12)_1px,transparent_1px)] [background-size:32px_32px]" />
         <div className="absolute -right-24 -top-28 h-72 w-72 rounded-full bg-brand-blue/20 blur-2xl" />

@@ -3,9 +3,14 @@ import { ContentCard } from '@/components/cards';
 import { ContentIndex } from '@/components/content-index';
 import { HomeBack } from '@/components/home-back';
 import { PageBanner } from '@/components/page-banner';
-import { getCollection } from '@/lib/content';
+import { getCollection, getCollectionMeta } from '@/lib/content';
+import { createPageMetadata } from '@/lib/content-metadata';
 
-export const metadata: Metadata = { title: 'Projects', description: 'Selected projects, frameworks, systems, and experiments from Chethan Puttegowda.' };
+export const metadata: Metadata = createPageMetadata(
+  'Projects',
+  'Selected projects, frameworks, systems, and experiments from Chethan Puttegowda.',
+  '/projects'
+);
 
 const projectSections = [
   { href: '#systems', label: 'Systems' },
@@ -39,7 +44,7 @@ export default function ProjectsPage() {
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-brand-blue dark:text-brand-sand">Systems</p>
         <h2 className="text-3xl font-semibold tracking-tight text-brand-navy dark:text-white">Selected systems and project archive</h2>
       </div>
-      <ContentIndex items={getCollection('projects')} basePath="/projects" />
+      <ContentIndex items={getCollectionMeta('projects')} basePath="/projects" />
     </section>
 
     <section id="frameworks" className="scroll-mt-28 mx-auto max-w-content px-5 py-14">
@@ -48,7 +53,7 @@ export default function ProjectsPage() {
         <h2 className="text-3xl font-semibold tracking-tight text-brand-navy dark:text-white">Reusable ways of thinking</h2>
         <p className="mt-3 max-w-3xl text-lg leading-8 text-ink-700 dark:text-ink-300">Practical frameworks, operating models, product strategy notes, and whitepaper-style summaries.</p>
       </div>
-      <div className="grid gap-5 md:grid-cols-2">{frameworks.map((item) => <ContentCard key={item.slug} item={item} href="#frameworks" />)}</div>
+      <div className="grid gap-5 md:grid-cols-2">{frameworks.map((item) => <ContentCard key={item.slug} item={item} href={`/frameworks/${item.slug}`} />)}</div>
     </section>
 
     <section id="lab" className="scroll-mt-28 mx-auto max-w-content px-5 py-14">
@@ -57,7 +62,7 @@ export default function ProjectsPage() {
         <h2 className="text-3xl font-semibold tracking-tight text-brand-navy dark:text-white">Experiments and learning in public</h2>
         <p className="mt-3 max-w-3xl text-lg leading-8 text-ink-700 dark:text-ink-300">Prototypes, MVPs, visual demos, small tools, and exploratory ideas before they become polished work.</p>
       </div>
-      <div className="grid gap-5 md:grid-cols-2">{lab.map((item) => <ContentCard key={item.slug} item={item} href="#lab" />)}</div>
+      <div className="grid gap-5 md:grid-cols-2">{lab.map((item) => <ContentCard key={item.slug} item={item} href={`/lab/${item.slug}`} />)}</div>
     </section>
   </>;
 }
